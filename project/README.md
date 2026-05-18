@@ -83,7 +83,7 @@ We are NOT:
 ### Tone & casing
 - **Sentence case** for everything: headlines, buttons, nav. (No All-Caps Headlines, no "Click Here Now".)
 - Eyebrow / label text uses small UPPERCASE with letter-spacing — and only there.
-- Numbers and stats are written out for emotion ("**Six sports.** One Saturday."), but use digits for facts ("Ages 5–12, 8 weeks, $179").
+- Numbers and stats are written out for emotion ("**Six sports.** One Saturday."), but use digits for facts ("Ages 5–12, 5 weeks, $179").
 - Use a Charlotte lens when natural ("Saturdays at Freedom Park", "From Ballantyne to NoDa") but never force it.
 
 ### Person
