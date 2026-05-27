@@ -83,8 +83,8 @@ We are NOT:
 ### Tone & casing
 - **Sentence case** for everything: headlines, buttons, nav. (No All-Caps Headlines, no "Click Here Now".)
 - Eyebrow / label text uses small UPPERCASE with letter-spacing — and only there.
-- Numbers and stats are written out for emotion ("**Six sports.** One Saturday."), but use digits for facts ("Ages 5–12, 8 weeks, $179").
-- Use a Charlotte lens when natural ("Saturdays at Freedom Park", "From Ballantyne to NoDa") but never force it.
+- Numbers and stats are written out for emotion ("**Six sports.** One Saturday."), but use digits for facts ("Ages 5–12, 5 weeks").
+- Use a Charlotte lens when natural ("From Ballantyne to NoDa") but never force it.
 
 ### Person
 - **"You" + "your kid"** — not "your child" (sounds clinical), not "your athlete" (sounds intense).
@@ -110,7 +110,7 @@ We are NOT:
 >
 > **Sub:** Charlotte's friendliest rec league — every kid plays, every game has a coach, and parents always know what time to be there.
 
-> **Sport page lead (Soccer):** Soccer Saturdays in South Park. Eight weeks of small-sided games on real grass, with coaches who care more about Cooper getting his first goal than the score on the board.
+> **Sport page lead (Soccer):** Soccer Saturdays. Five weeks of small-sided games on real grass, with coaches who care more about Cooper getting his first goal than the score on the board.
 
 > **Empty schedule state:** Nothing on the calendar yet. Sign up for a season and your Saturdays start filling in.
 
