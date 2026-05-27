@@ -85,7 +85,6 @@
   .sport-pick input:checked + .opt:hover { border-color: var(--fof-navy-800); background: var(--fof-navy-50); }
   .sport-pick .opt i { font-size: 36px; display: block; margin-bottom: 6px; }
   .sport-pick .opt .name { font-weight: 800; color: var(--fof-navy-800); font-size: 14px; }
-  .sport-pick .opt .price { font-size: 12px; color: var(--fof-slate-500); font-family: var(--font-mono); }
 
   /* Order summary */
   .summary {
@@ -214,17 +213,16 @@ const steps = [
       </div>
       <label style="display:block;font-size:14px;font-weight:600;color:var(--fof-navy-800);margin:14px 0 10px">Pick a sport</label>
       <div class="sport-pick">
-        <label><input type="radio" name="sport" checked><div class="opt"><i class="ph ph-soccer-ball" style="color:#1F8A4C"></i><div class="name">Soccer</div><div class="price">$179</div></div></label>
-        <label><input type="radio" name="sport"><div class="opt"><i class="ph ph-football" style="color:#D97A3C"></i><div class="name">Flag football</div><div class="price">$189</div></div></label>
-        <label><input type="radio" name="sport"><div class="opt"><i class="ph ph-basketball" style="color:#C2410C"></i><div class="name">Basketball</div><div class="price">$199</div></div></label>
-        <label><input type="radio" name="sport"><div class="opt"><i class="ph ph-baseball" style="color:#1E40AF"></i><div class="name">T-ball</div><div class="price">$179</div></div></label>
-        <label><input type="radio" name="sport"><div class="opt"><i class="ph ph-volleyball" style="color:#7C3AED"></i><div class="name">Volleyball</div><div class="price">$169</div></div></label>
-        <label><input type="radio" name="sport"><div class="opt"><i class="ph ph-confetti" style="color:#DB2777"></i><div class="name">Cheer</div><div class="price">$159</div></div></label>
+        <label><input type="radio" name="sport" checked><div class="opt"><i class="ph ph-soccer-ball" style="color:#1F8A4C"></i><div class="name">Soccer</div></div></label>
+        <label><input type="radio" name="sport"><div class="opt"><i class="ph ph-football" style="color:#D97A3C"></i><div class="name">Flag football</div></div></label>
+        <label><input type="radio" name="sport"><div class="opt"><i class="ph ph-basketball" style="color:#C2410C"></i><div class="name">Basketball</div></div></label>
+        <label><input type="radio" name="sport"><div class="opt"><i class="ph ph-baseball" style="color:#1E40AF"></i><div class="name">T-ball</div></div></label>
+        <label><input type="radio" name="sport"><div class="opt"><i class="ph ph-volleyball" style="color:#7C3AED"></i><div class="name">Volleyball</div></div></label>
+        <label><input type="radio" name="sport"><div class="opt"><i class="ph ph-confetti" style="color:#DB2777"></i><div class="name">Cheer</div></div></label>
       </div>
       <div class="summary">
-        <div class="row"><span style="color:var(--fof-slate-500)">Spring soccer · 8 weeks</span><span>$179.00</span></div>
+        <div class="row"><span style="color:var(--fof-slate-500)">Spring soccer · 5 weeks</span></div>
         <div class="row"><span style="color:var(--fof-slate-500)">Jersey + uniform</span><span>included</span></div>
-        <div class="total"><span>Today's total</span><span>$179.00</span></div>
       </div>
     `
   },
@@ -276,9 +274,8 @@ const steps = [
       <h1>Almost there.</h1>
       <p class="lead">Secure payment via Stripe. Your card isn't charged until you confirm.</p>
       <div class="summary" style="margin-bottom:28px">
-        <div class="row"><span style="color:var(--fof-slate-500)">Spring soccer · Cooper · 8 weeks</span><span>$179.00</span></div>
+        <div class="row"><span style="color:var(--fof-slate-500)">Spring soccer · Cooper · 5 weeks</span></div>
         <div class="row"><span style="color:var(--fof-slate-500)">Jersey + uniform</span><span>included</span></div>
-        <div class="total"><span>Total due today</span><span>$179.00</span></div>
       </div>
       <div class="field">
         <label>Name on card</label>
@@ -327,7 +324,7 @@ function renderStep(n) {
     ${step.render()}
     <div class="actions">
       <button class="btn btn-ghost" onclick="go(${n - 1})" ${n === 1 ? 'style="visibility:hidden"' : ''}>← Back</button>
-      <button class="btn btn-primary" onclick="go(${n + 1})">${n === 4 ? 'Pay $179.00 →' : 'Continue →'}</button>
+      <button class="btn btn-primary" onclick="go(${n + 1})">${n === 4 ? 'Complete registration →' : 'Continue →'}</button>
     </div>
   `;
   lucide.createIcons();
@@ -363,7 +360,7 @@ function showDone() {
       <div class="check"><i data-lucide="check" style="width:40px;height:40px"></i></div>
       <h1>You're in!</h1>
       <p class="lead">We'll email you a confirmation now and your team match within a week. Coach will reach out before opening day.</p>
-      <p style="font-size:14px;color:var(--fof-slate-500);margin-top:8px">Cooper Mendoza · Spring Soccer · $179.00 paid</p>
+      <p style="font-size:14px;color:var(--fof-slate-500);margin-top:8px">Cooper Mendoza · Spring Soccer</p>
       <a href="../dashboard/index.html" class="btn btn-primary" style="margin-top:24px">Go to my dashboard →</a>
     </div>`;
   lucide.createIcons();
