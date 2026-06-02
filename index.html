@@ -1,712 +1,124 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="FOF Youth Sports — Charlotte's friendliest rec league for ages 5–12. Soccer, flag football, basketball, T-ball, volleyball, and cheer. No tryouts, ever.">
-<title>FOF Youth Sports — Focus On Fundamentals · Charlotte, NC</title>
-<link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/hero-loop.css">
-<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-<style>
-  /* ── Reset & base ── */
-  *, *::before, *::after { box-sizing: border-box; }
-  body { margin: 0; background: #fff; color: var(--fof-ink); }
+FOF
+F.O.F. YOUTH SPORTS
+Home
+Schedule
+Sports
+Register
+Contact
+Register Now →
+Charlotte, NC · Corvian Community School
+FOCUS ON
+FUNDAMENTALS
+F.O.F. Youth Sports · Grades K–8
+Charlotte's premier Saturday youth sports league. Five sessions, seven sports, one community. Building athletes and champions from Kindergarten through 8th grade — every Saturday, all year long.
 
-  /* ── Nav ── */
-  .nav {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(255,255,255,0.88);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--fof-slate-100);
-  }
-  .nav-inner {
-    max-width: 1180px; margin: 0 auto;
-    padding: 14px var(--gutter);
-    display: flex; align-items: center; gap: 32px;
-  }
-  .nav-brand {
-    display: flex; align-items: center; gap: 10px;
-    text-decoration: none; flex-shrink: 0;
-  }
-  .nav-brand span {
-    font-family: var(--font-display); font-weight: 900;
-    font-size: 18px; color: var(--fof-navy-800); letter-spacing: -0.5px;
-  }
-  .nav-links { display: flex; gap: 24px; flex: 1; }
-  .nav-links a {
-    color: var(--fof-ink); font-weight: 600; font-size: 14px;
-    text-decoration: none;
-  }
-  .nav-links a:hover { color: var(--fof-navy-700); }
-  .nav-actions { display: flex; gap: 10px; align-items: center; }
+Register for 2026–2027 →
+View Schedule
+25
+Game Saturdays
+7
+Sports & Programs
+K–8
+All Grades Welcome
+$150
+Per Session
+Scroll
+2026 – 2027 Season
+FIVE SEASONS. ONE PROGRAM.
+Every session runs five Saturdays with a Championship Day closing each block. Register by session — never a long-term commitment.
 
-  /* ── Buttons ── */
-  .btn {
-    font-family: var(--font-display); font-weight: 900; font-size: 15px;
-    padding: 11px 22px; border-radius: 999px; border: 0;
-    cursor: pointer; transition: all 200ms var(--ease-out);
-    letter-spacing: -0.01em; display: inline-flex; align-items: center;
-    gap: 8px; text-decoration: none; white-space: nowrap;
-  }
-  .btn-primary {
-    background: var(--fof-gold-500); color: var(--fof-navy-900);
-    box-shadow: 0 5px 0 var(--fof-gold-900), 0 10px 20px rgba(255,199,44,0.28);
-  }
-  .btn-primary:hover { background: #FFD25A; text-decoration: none; color: var(--fof-navy-900); }
-  .btn-primary:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--fof-gold-900); }
-  .btn-secondary {
-    background: var(--fof-navy-800); color: #fff;
-    box-shadow: 0 4px 0 var(--fof-navy-900);
-  }
-  .btn-secondary:hover { background: var(--fof-navy-700); text-decoration: none; color: #fff; }
-  .btn-ghost {
-    background: transparent; color: var(--fof-navy-800);
-    border: 1.5px solid var(--fof-navy-800);
-  }
-  .btn-ghost:hover { background: var(--fof-navy-50); text-decoration: none; color: var(--fof-navy-800); }
-  .btn-ghost-white {
-    background: rgba(255,255,255,0.08); color: #fff;
-    border: 1.5px solid #2E5DB8;
-  }
-  .btn-ghost-white:hover { background: rgba(255,255,255,0.16); text-decoration: none; color: #fff; }
-  .btn-sm { font-size: 13px; padding: 8px 18px; }
+Fall Season
+FALL SESSION A
+Sep 19 – Oct 17, 2026
+Basketball · Soccer · Flag Football · Cheer · Tee Ball
 
-  /* ── Hero ── */
-  .hero {
-    position: relative; background: var(--fof-navy-800); color: #fff;
-    overflow: hidden; padding: 80px var(--gutter) 100px;
-  }
-  .hero::before {
-    content: ""; position: absolute; inset: 0;
-    background-image: url("assets/pattern-confetti.svg");
-    opacity: 0.18; background-size: 280px; pointer-events: none;
-  }
-  .hero-inner {
-    position: relative; max-width: 1180px; margin: 0 auto;
-    display: grid; grid-template-columns: 1.1fr 1fr;
-    gap: 48px; align-items: center;
-  }
-  .hero-eyebrow {
-    font-size: 12px; font-weight: 800; letter-spacing: 2px;
-    text-transform: uppercase; color: var(--fof-gold-500); margin-bottom: 18px;
-  }
-  .hero h1 {
-    font-size: clamp(44px, 5.5vw, 76px); line-height: 1.02;
-    letter-spacing: -0.03em; font-weight: 900;
-    text-wrap: balance; color: #fff; margin: 0;
-  }
-  .hero h1 em { font-style: normal; color: var(--fof-gold-500); }
-  .hero p {
-    font-size: 19px; color: #BFD0EE;
-    margin: 18px 0 28px; max-width: 520px; line-height: 1.55;
-  }
-  .hero .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
-  .hero .stats { display: flex; gap: 32px; margin-top: 40px; flex-wrap: wrap; }
-  .hero .stats .stat-item { display: flex; flex-direction: column; }
-  .hero .stats .num {
-    font-family: var(--font-display); font-weight: 900;
-    font-size: 32px; color: var(--fof-gold-500); line-height: 1;
-  }
-  .hero .stats .lbl {
-    font-size: 12px; color: #BFD0EE; font-weight: 600;
-    letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px;
-  }
+5 Saturdays · Championship Day Oct 17
+Fall Season
+FALL SESSION B
+Nov 7 – Dec 12, 2026
+Basketball · Volleyball · Cheer
 
-  /* ── Hero video panel ── */
-  .hero-panel { position: relative; }
-  .hero-video {
-    position: relative; border-radius: 24px; overflow: hidden;
-    aspect-ratio: 4/5;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.35);
-    background: #0B2A5B;
-  }
-  .hero-video video {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: cover; z-index: 1;
-  }
-  .hero-video .grade {
-    position: absolute; inset: 0; z-index: 2;
-    background: linear-gradient(180deg,rgba(11,42,91,0) 50%,rgba(11,42,91,0.55) 100%),
-                linear-gradient(135deg,rgba(255,199,44,0.10),rgba(11,42,91,0));
-  }
-  .hero-video .badge {
-    position: absolute; top: 14px; left: 14px;
-    background: rgba(11,42,91,0.9); color: var(--fof-gold-500);
-    font-weight: 800; font-size: 10px; letter-spacing: 1.5px;
-    text-transform: uppercase; padding: 6px 11px; border-radius: 999px;
-    z-index: 4; display: inline-flex; align-items: center; gap: 6px;
-  }
-  .hero-video .badge::before {
-    content: ""; width: 7px; height: 7px; border-radius: 50%;
-    background: var(--fof-rally-500); animation: blink-dot 1.4s infinite;
-  }
-  @keyframes blink-dot { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  .hero-video .cap {
-    position: absolute; bottom: 14px; left: 14px; right: 14px;
-    color: #fff; font-weight: 700; font-size: 13px; z-index: 4;
-    text-shadow: 0 1px 8px rgba(0,0,0,0.6);
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .sound-toggle {
-    background: rgba(11,42,91,0.7); border: 1px solid rgba(255,255,255,0.2);
-    color: #fff; width: 34px; height: 34px; border-radius: 50%;
-    cursor: pointer; display: flex; align-items: center; justify-content: center;
-    font-size: 14px; backdrop-filter: blur(6px);
-  }
-  .sound-toggle:hover { background: rgba(11,42,91,0.9); }
-  .hero-score {
-    position: absolute; top: 24px; right: -14px;
-    background: var(--fof-gold-500); color: var(--fof-navy-900);
-    padding: 14px 18px; border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    transform: rotate(4deg); z-index: 3;
-  }
-  .hero-score .label {
-    font-size: 10px; letter-spacing: 1.5px;
-    font-weight: 700; text-transform: uppercase;
-  }
-  .hero-score .scoreline {
-    font-family: var(--font-mono); font-weight: 600; font-size: 22px; margin-top: 2px;
-  }
+5 Saturdays + Bye · Championship Dec 12
+Winter Season
+WINTER SESSION A
+Jan 9 – Feb 6, 2027
+Basketball · Volleyball · F.O.F. Combine ★
 
-  /* ── Section base ── */
-  section { padding: 80px var(--gutter); }
-  .container { max-width: 1180px; margin: 0 auto; }
-  .eyebrow {
-    font-size: 12px; font-weight: 800; letter-spacing: 2px;
-    text-transform: uppercase; color: var(--fof-navy-800); margin-bottom: 12px;
-  }
-  .section-h2 {
-    font-size: clamp(32px,3.5vw,48px); font-weight: 900;
-    letter-spacing: -0.025em; line-height: 1.08; text-wrap: balance;
-    color: var(--fof-navy-800); margin: 0;
-  }
-  .section-lead {
-    font-size: 18px; color: var(--fof-slate-700);
-    max-width: 620px; margin-top: 14px; line-height: 1.55;
-  }
+5 Saturdays · Championship Feb 6
+Winter Season
+WINTER SESSION B
+Feb 20 – Mar 20, 2027
+Basketball · Volleyball · F.O.F. Combine ★
 
-  /* ── Sports grid ── */
-  .sports-section { background: var(--fof-cream); }
-  .sport-grid {
-    display: grid; grid-template-columns: repeat(3,1fr);
-    gap: 18px; margin-top: 40px;
-  }
-  .sport-card {
-    background: #fff; border-radius: 20px; padding: 24px;
-    border: 1px solid var(--fof-slate-100); box-shadow: var(--shadow-sm);
-    transition: all 200ms var(--ease-out); cursor: pointer; position: relative;
-    text-decoration: none; display: block; color: inherit;
-  }
-  .sport-card:hover {
-    transform: translateY(-4px); box-shadow: var(--shadow-lg);
-    text-decoration: none; color: inherit;
-  }
-  .sport-card .pill {
-    display: inline-block; color: #fff; font-size: 11px; font-weight: 800;
-    padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: 1.5px;
-  }
-  .sport-card .sport-icon { font-size: 64px; margin: 14px 0; display: block; }
-  .sport-card h3 {
-    font-family: var(--font-display); font-weight: 900;
-    font-size: 24px; color: var(--fof-navy-800); margin: 0;
-  }
-  .sport-card p { color: var(--fof-slate-500); font-size: 14px; margin-top: 6px; line-height: 1.5; }
-  .sport-card .meta {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-top: 16px; padding-top: 14px;
-    border-top: 1px dashed var(--fof-slate-100); font-size: 13px;
-  }
-  .sport-card .meta .price {
-    font-family: var(--font-display); font-weight: 900;
-    font-size: 18px; color: var(--fof-navy-800);
-  }
+5 Saturdays · Championship Mar 20
+Spring Season
+SPRING SESSION
+Apr 17 – May 22, 2027
+Basketball · Soccer · Flag Football · Cheer · Tee Ball
 
-  /* ── How it works ── */
-  .how-grid {
-    display: grid; grid-template-columns: repeat(3,1fr);
-    gap: 24px; margin-top: 48px;
-  }
-  .step {
-    padding: 28px 24px; background: #fff; border-radius: 20px;
-    border: 1px solid var(--fof-slate-100); position: relative;
-  }
-  .step .num {
-    position: absolute; top: -18px; left: 24px;
-    background: var(--fof-gold-500); color: var(--fof-navy-900);
-    width: 36px; height: 36px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-display); font-weight: 900; font-size: 18px;
-    box-shadow: var(--shadow-sm);
-  }
-  .step h3 {
-    font-family: var(--font-display); font-weight: 800;
-    font-size: 22px; color: var(--fof-navy-800); margin: 8px 0 0;
-  }
-  .step p { color: var(--fof-slate-700); margin-top: 8px; font-size: 15px; line-height: 1.55; }
+5 Saturdays + Bye · Season Finale May 22
+🏆
+READY TO JOIN?
+$150 per session · Grades K–8 · All skill levels welcome
 
-  /* ── Testimonials ── */
-  .testi-section { background: var(--fof-navy-50); }
-  .testi-grid {
-    display: grid; grid-template-columns: repeat(2,1fr);
-    gap: 24px; margin-top: 40px;
-  }
-  .quote {
-    background: #fff; border-radius: 20px; padding: 28px;
-    border: 1px solid var(--fof-slate-100);
-  }
-  .quote blockquote {
-    margin: 0; font-family: var(--font-display); font-weight: 800;
-    font-size: 22px; color: var(--fof-navy-800); line-height: 1.3; letter-spacing: -0.01em;
-  }
-  .quote .author { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
-  .quote .avatar {
-    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--fof-navy-900); font-weight: 900; font-family: var(--font-display);
-  }
-  .quote .who { font-weight: 700; font-size: 14px; }
-  .quote .who .role {
-    color: var(--fof-slate-500); font-weight: 500; font-size: 13px; display: block;
-  }
+Register Now →
+New This Season — Winter A & B Only
+F.O.F. COMBINE
+The only athletic development program of its kind in Charlotte youth sports. Speed, agility, strength, coordination, and sport transfer training that makes every athlete better at every sport they play. Running exclusively during Winter sessions A and B.
 
-  /* ── CTA strip ── */
-  .cta-strip {
-    background: var(--fof-gold-500); padding: 64px var(--gutter);
-    color: var(--fof-navy-900);
-  }
-  .cta-strip-inner {
-    max-width: 1180px; margin: 0 auto;
-    display: flex; justify-content: space-between;
-    align-items: center; gap: 32px; flex-wrap: wrap;
-  }
-  .cta-strip h2 {
-    font-size: clamp(28px,3vw,42px); font-weight: 900;
-    max-width: 640px; color: var(--fof-navy-900);
-    letter-spacing: -0.025em; margin: 0;
-  }
-  .cta-strip .btn-secondary { box-shadow: 0 5px 0 var(--fof-navy-900); }
+$50
+Add-On / Session
+Add to Registration →
+Program Pillars
+WHAT WE DEVELOP
+⚡
+SPEED
+Linear acceleration, burst speed, and sport-specific explosive movement patterns.
+🔄
+AGILITY
+Change of direction, reaction time, and lateral quickness that transfers to every sport.
+💪
+STRENGTH
+Functional bodyweight strength, core stability, and joint integrity — age-appropriate always.
+🎯
+COORDINATION
+Multi-limb coordination, rhythm, and body awareness that makes athleticism visible.
+🏀
+SPORT TRANSFER
+Every Combine session ends by connecting training directly to live sport situations.
+Founder & Program Director
+COACH JEFFERY BRANTLEY
+Coach Brantley brings over a decade of youth athletic administration to F.O.F. Youth Sports. As a Physical Education Teacher and Head Basketball Coach at Corvian Community School — where he led the Cardinals to the 2025 North Carolina State Basketball Championship — Coach Brantley has spent his career building athletes and communities.
 
-  /* ── Footer ── */
-  footer {
-    background: var(--fof-navy-900); color: #BFD0EE;
-    padding: 56px var(--gutter) 28px;
-  }
-  .foot-inner {
-    max-width: 1180px; margin: 0 auto;
-    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 32px;
-  }
-  footer h4 {
-    color: #fff; font-family: var(--font-display); font-weight: 800;
-    font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px;
-  }
-  footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-  footer a { color: #BFD0EE; font-size: 14px; text-decoration: none; }
-  footer a:hover { color: var(--fof-gold-500); }
-  .foot-tagline {
-    font-size: 13px; line-height: 1.6; color: #BFD0EE;
-    margin-top: 12px; max-width: 300px;
-  }
-  .foot-base {
-    max-width: 1180px; margin: 32px auto 0;
-    padding-top: 20px; border-top: 1px solid #173A7A;
-    display: flex; justify-content: space-between; font-size: 12px; color: #94A3B8;
-  }
+His vision for F.O.F. is rooted in a simple belief: every child deserves structured, professional athletic development — not just the ones at elite academies.
 
-  /* ── Responsive ── */
-  @media (max-width: 880px) {
-    .hero-inner,
-    .sport-grid,
-    .how-grid,
-    .testi-grid,
-    .foot-inner { grid-template-columns: 1fr; }
-    .hero { padding: 48px var(--gutter) 64px; }
-    section { padding: 56px var(--gutter); }
-    .nav-links { display: none; }
-    .hero-score { display: none; }
-  }
-</style>
-</head>
-<body>
+2025 NC State Champions
+M.A.T. Physical Education
+10+ Yrs Athletic Admin
+10+
+Years Athletic Admin
+🏆
+2025 State Champs
+$150K+
+Facility Grants Secured
+4.0
+Graduate GPA
+F.O.F. YOUTH SPORTS
+Focus On Fundamentals
+Charlotte's premier Saturday youth sports league for grades K–8. Five sessions, seven sports, one community. Hosted at Corvian Community School. Founded by Coach Jeffery Brantley and Brantley Sports Group LLC.
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-brand">
-      <img src="assets/logo-mark.svg" width="40" height="40" alt="">
-      <span>FOF Sports</span>
-    </a>
-    <div class="nav-links">
-      <a href="#sports">Sports</a>
-      <a href="#how">How it works</a>
-      <a href="#parents">For parents</a>
-      <a href="coach/index.html">Coach</a>
-      <a href="#about">About</a>
-    </div>
-    <div class="nav-actions">
-      <a href="dashboard/index.html" class="btn btn-ghost btn-sm">Sign in</a>
-      <a href="register/index.html" class="btn btn-primary btn-sm">Register</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="hero-eyebrow">Spring 2026 · Registration open</div>
-      <h1>Six sports. One Saturday. <em>Focus on the fundamentals.</em></h1>
-      <p>Charlotte's friendliest rec league for ages 5–12. Every kid plays, every game has a coach, and parents always know what time to be there.</p>
-      <div class="cta-row">
-        <a href="register/index.html" class="btn btn-primary">Register your kid <span style="font-size:18px">→</span></a>
-        <a href="#sports" class="btn btn-ghost-white">See the sports</a>
-      </div>
-      <div class="stats">
-        <div class="stat-item"><span class="num">6</span><span class="lbl">Sports</span></div>
-        <div class="stat-item"><span class="num">8</span><span class="lbl">Week season</span></div>
-        <div class="stat-item"><span class="num">2,400+</span><span class="lbl">Kids playing</span></div>
-        <div class="stat-item"><span class="num">100%</span><span class="lbl">Play time</span></div>
-      </div>
-    </div>
-
-    <div class="hero-panel">
-      <div class="hero-video">
-        <video autoplay muted loop playsinline poster="assets/hero-poster.jpg">
-          <source src="assets/hero-loop.webm" type="video/webm">
-          <source src="assets/hero-loop.mp4" type="video/mp4">
-        </video>
-        <div class="scene-loop" aria-hidden="true">
-
-          <!-- SCENE 1 — SOCCER -->
-          <div class="scene scene-1">
-            <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
-              <g opacity="0.35" stroke="#fff" stroke-width="2" fill="none">
-                <path d="M-20 380 L420 360"/><path d="M-20 430 L420 410"/>
-                <ellipse cx="200" cy="395" rx="110" ry="22"/>
-              </g>
-              <circle cx="320" cy="100" r="60" fill="#FFE7A8" opacity="0.55"/>
-              <g class="s1-figure">
-                <ellipse cx="110" cy="445" rx="40" ry="6" fill="#000" opacity="0.25"/>
-                <path d="M90 440 L100 360 L120 360 L130 440 Z" fill="#0B2A5B"/>
-                <path d="M85 360 Q110 330 135 360 L130 280 L90 280 Z" fill="#FFC72C"/>
-                <path d="M90 280 L130 280 L135 250 Q110 240 85 250 Z" fill="#FFC72C"/>
-                <circle cx="110" cy="235" r="22" fill="var(--skin-3)"/>
-                <path d="M88 222 Q110 205 132 222 L135 240 Q110 232 85 240 Z" fill="#0B2A5B"/>
-                <path d="M120 360 L155 410" stroke="#0B2A5B" stroke-width="14" stroke-linecap="round"/>
-                <circle cx="160" cy="414" r="7" fill="#0B2A5B"/>
-              </g>
-              <g class="s1-dust">
-                <circle cx="170" cy="420" r="8" fill="#fff" opacity="0.6"/>
-                <circle cx="185" cy="425" r="5" fill="#fff" opacity="0.5"/>
-                <circle cx="160" cy="428" r="4" fill="#fff" opacity="0.4"/>
-              </g>
-              <g class="s1-ball">
-                <circle cx="180" cy="410" r="14" fill="#fff" stroke="#0B2A5B" stroke-width="2"/>
-                <polygon points="180,400 188,407 185,418 175,418 172,407" fill="#0B2A5B"/>
-              </g>
-            </svg>
-            <div class="tag s1-tag"><span class="small">Spring · Saturday</span><span class="big">Soccer</span></div>
-          </div>
-
-          <!-- SCENE 2 — VOLLEYBALL -->
-          <div class="scene scene-2">
-            <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
-              <rect x="0" y="380" width="400" height="120" fill="#7A3A1A" opacity="0.4"/>
-              <g stroke="#FFE7A8" stroke-width="1.5" opacity="0.4">
-                <path d="M0 400 L400 400"/><path d="M0 430 L400 430"/><path d="M0 460 L400 460"/>
-              </g>
-              <line x1="200" y1="180" x2="200" y2="380" stroke="#fff" stroke-width="3"/>
-              <g opacity="0.5">
-                <pattern id="netpat" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                  <path d="M0 0 L10 10 M10 0 L0 10" stroke="#fff" stroke-width="1"/>
-                </pattern>
-                <rect x="180" y="180" width="40" height="160" fill="url(#netpat)"/>
-              </g>
-              <g class="s2-fig-l">
-                <ellipse cx="100" cy="445" rx="36" ry="5" fill="#000" opacity="0.25"/>
-                <path d="M82 440 L92 370 L108 370 L118 440 Z" fill="#0B2A5B"/>
-                <path d="M78 370 Q100 340 122 370 L118 290 L82 290 Z" fill="#7C3AED"/>
-                <circle cx="100" cy="245" r="20" fill="var(--skin-1)"/>
-                <path d="M82 232 Q100 218 118 232 L120 248 Q100 240 80 248 Z" fill="#3B2410"/>
-                <path d="M75 290 Q60 240 75 220" stroke="var(--skin-1)" stroke-width="10" fill="none" stroke-linecap="round"/>
-                <path d="M125 290 Q140 240 125 220" stroke="var(--skin-1)" stroke-width="10" fill="none" stroke-linecap="round"/>
-              </g>
-              <g class="s2-fig-r">
-                <ellipse cx="300" cy="435" rx="36" ry="5" fill="#000" opacity="0.25"/>
-                <path d="M282 430 L292 360 L308 360 L318 430 Z" fill="#0B2A5B"/>
-                <path d="M278 360 Q300 330 322 360 L318 280 L282 280 Z" fill="#FFC72C"/>
-                <circle cx="300" cy="235" r="20" fill="var(--skin-4)"/>
-                <path d="M280 224 Q300 212 320 224 L322 240 Q300 232 280 240 Z" fill="#1A0E08"/>
-                <path d="M320 280 Q345 230 335 195" stroke="var(--skin-4)" stroke-width="10" fill="none" stroke-linecap="round"/>
-              </g>
-              <g class="s2-ball">
-                <circle cx="100" cy="260" r="15" fill="#FFF8E7" stroke="#0B2A5B" stroke-width="2"/>
-                <path d="M85 260 Q100 250 115 260 M85 260 Q100 270 115 260 M100 245 L100 275" stroke="#0B2A5B" stroke-width="1.5" fill="none"/>
-              </g>
-            </svg>
-            <div class="tag s2-tag"><span class="small">Indoor · gym night</span><span class="big">Volleyball</span></div>
-          </div>
-
-          <!-- SCENE 3 — FLAG FOOTBALL -->
-          <div class="scene scene-3">
-            <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
-              <g class="s3-pan">
-                <rect x="-100" y="360" width="700" height="180" fill="#1F8A4C"/>
-                <g stroke="#fff" stroke-width="3" opacity="0.85">
-                  <line x1="-50" y1="360" x2="-50" y2="540"/>
-                  <line x1="80" y1="360" x2="80" y2="540"/>
-                  <line x1="210" y1="360" x2="210" y2="540"/>
-                  <line x1="340" y1="360" x2="340" y2="540"/>
-                  <line x1="470" y1="360" x2="470" y2="540"/>
-                </g>
-                <g fill="#fff" opacity="0.85" font-family="DM Mono, monospace" font-weight="700" font-size="22" text-anchor="middle">
-                  <text x="-50" y="395">40</text><text x="80" y="395">30</text>
-                  <text x="210" y="395">20</text><text x="340" y="395">10</text>
-                  <text x="470" y="395">G</text>
-                </g>
-              </g>
-              <rect x="0" y="320" width="400" height="40" fill="#0B2A5B" opacity="0.35"/>
-              <g class="s3-runner" transform="translate(150 0)">
-                <ellipse cx="60" cy="450" rx="30" ry="5" fill="#000" opacity="0.3"/>
-                <path d="M40 380 Q60 350 80 380 L75 290 L45 290 Z" fill="#D97A3C"/>
-                <circle cx="60" cy="250" r="20" fill="var(--skin-2)"/>
-                <path d="M42 240 Q60 226 78 240 L80 256 Q60 248 40 256 Z" fill="#3B2410"/>
-                <path d="M44 245 L76 245" stroke="#FFC72C" stroke-width="3"/>
-                <ellipse cx="38" cy="320" rx="14" ry="7" fill="#7A3A1A" stroke="#fff" stroke-width="1.5" transform="rotate(-20 38 320)"/>
-                <line x1="32" y1="316" x2="44" y2="322" stroke="#fff" stroke-width="1.5"/>
-                <g class="s3-runner-leg" transform-origin="55px 380px">
-                  <path d="M52 380 L42 440" stroke="#0B2A5B" stroke-width="12" stroke-linecap="round"/>
-                </g>
-                <g class="s3-runner-leg" style="animation-delay:-0.2s" transform-origin="68px 380px">
-                  <path d="M68 380 L78 440" stroke="#0B2A5B" stroke-width="12" stroke-linecap="round"/>
-                </g>
-                <g class="s3-flag" transform-origin="85px 340px">
-                  <rect x="82" y="335" width="30" height="6" fill="#FFC72C"/>
-                </g>
-              </g>
-            </svg>
-            <div class="tag s3-tag"><span class="small">Friday lights</span><span class="big">Flag football</span></div>
-          </div>
-
-          <!-- SCENE 4 — BASKETBALL CLIMAX -->
-          <div class="scene scene-4">
-            <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
-              <g class="s4-hoop">
-                <rect x="260" y="100" width="110" height="70" fill="#FFF8E7" stroke="#0B2A5B" stroke-width="3" rx="4"/>
-                <rect x="295" y="125" width="40" height="25" fill="none" stroke="#0B2A5B" stroke-width="3"/>
-                <line x1="260" y1="100" x2="260" y2="40" stroke="#0B2A5B" stroke-width="4"/>
-                <ellipse cx="315" cy="175" rx="30" ry="6" fill="none" stroke="#C2410C" stroke-width="4"/>
-              </g>
-              <g class="s4-net" stroke="#fff" stroke-width="1.5" fill="none" opacity="0.9">
-                <path d="M290 175 L295 215"/><path d="M298 175 L302 215"/>
-                <path d="M306 175 L308 215"/><path d="M314 175 L314 215"/>
-                <path d="M322 175 L320 215"/><path d="M330 175 L326 215"/>
-                <path d="M338 175 L332 215"/>
-                <path d="M290 175 Q315 210 338 175"/>
-                <path d="M295 195 Q315 215 332 195"/>
-              </g>
-              <rect x="0" y="410" width="400" height="90" fill="#7A3A1A" opacity="0.5"/>
-              <line x1="0" y1="410" x2="400" y2="410" stroke="#FFE7A8" stroke-width="1.5"/>
-              <g class="s4-shooter" transform="translate(80 0)">
-                <ellipse cx="40" cy="450" rx="30" ry="5" fill="#000" opacity="0.3"/>
-                <path d="M22 380 L40 290 L58 290 L58 380 Z" fill="#0B2A5B"/>
-                <path d="M18 290 Q40 260 62 290 L60 220 L20 220 Z" fill="#FFC72C"/>
-                <circle cx="40" cy="195" r="18" fill="var(--skin-5)"/>
-                <path d="M22 184 Q40 172 58 184 L60 200 Q40 192 22 200 Z" fill="#1A0E08"/>
-                <path d="M58 220 Q90 170 105 130" stroke="var(--skin-5)" stroke-width="10" fill="none" stroke-linecap="round"/>
-                <path d="M28 380 L18 440" stroke="#0B2A5B" stroke-width="12" stroke-linecap="round"/>
-                <path d="M52 380 L62 440" stroke="#0B2A5B" stroke-width="12" stroke-linecap="round"/>
-              </g>
-              <g class="s4-arc">
-                <circle cx="200" cy="250" r="18" fill="#E8853A" stroke="#0B2A5B" stroke-width="2"/>
-                <path d="M182 250 L218 250 M200 232 L200 268 M186 238 Q200 250 186 262 M214 238 Q200 250 214 262" stroke="#0B2A5B" stroke-width="1.5" fill="none"/>
-              </g>
-              <g class="s4-confetti" transform="translate(315 215)">
-                <circle r="4" fill="#FFC72C" style="--cx:-60px;--cy:-40px"/>
-                <circle r="3" fill="#FFF8E7" style="--cx:50px;--cy:-50px"/>
-                <rect width="6" height="3" fill="#FFC72C" style="--cx:60px;--cy:30px"/>
-                <rect width="5" height="2" fill="#fff" style="--cx:-70px;--cy:20px"/>
-                <circle r="3" fill="#FFC72C" style="--cx:0px;--cy:-70px"/>
-                <circle r="4" fill="#FFF8E7" style="--cx:30px;--cy:60px"/>
-                <rect width="4" height="4" fill="#FFC72C" style="--cx:-40px;--cy:50px"/>
-              </g>
-              <g class="s4-score" transform="translate(200 320)">
-                <rect x="-50" y="-30" width="100" height="60" rx="12" fill="#0B2A5B" stroke="#FFC72C" stroke-width="3"/>
-                <text x="0" y="12" font-family="Nunito, sans-serif" font-weight="900" font-size="36" fill="#FFC72C" text-anchor="middle">+2</text>
-              </g>
-            </svg>
-            <div class="tag s4-tag"><span class="small">She got it · buzzer beater</span><span class="big">MADE IT.</span></div>
-          </div>
-
-        </div>
-        <div class="grade" aria-hidden="true"></div>
-        <span class="badge">Live · Spring '26</span>
-        <div class="cap">
-          <span>Real kids. Real Saturdays.</span>
-          <button class="sound-toggle" aria-label="Toggle sound" onclick="const v=this.closest('.hero-video').querySelector('video');v.muted=!v.muted;this.textContent=v.muted?'🔇':'🔊'">🔇</button>
-        </div>
-      </div>
-      <div class="hero-score">
-        <div class="label">Live · Field 3</div>
-        <div class="scoreline">Lions 3 · Hawks 2</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<section class="sports-section" id="sports">
-  <div class="container">
-    <div class="eyebrow">Pick your sport</div>
-    <h2 class="section-h2">Six ways to spend a great Saturday.</h2>
-    <p class="section-lead">All seasons run 8 weeks. One practice + one Saturday game per week. No tryouts, ever.</p>
-
-    <div class="sport-grid">
-      <a href="register/index.html" class="sport-card">
-        <span class="pill" style="background:#1F8A4C">Soccer</span>
-        <i class="ph ph-soccer-ball sport-icon" style="color:#1F8A4C"></i>
-        <h3>Spring Soccer</h3>
-        <p>Small-sided games on real grass. South Park &amp; Freedom Park fields.</p>
-        <div class="meta"><span style="color:var(--fof-slate-500)">Ages 5–12 · 8 weeks</span><span class="price">$179</span></div>
-      </a>
-      <a href="register/index.html" class="sport-card">
-        <span class="pill" style="background:#D97A3C">Flag football</span>
-        <i class="ph ph-football sport-icon" style="color:#D97A3C"></i>
-        <h3>Flag Football</h3>
-        <p>Non-contact, fast-paced, huge fun. NFL FLAG-style 5-on-5.</p>
-        <div class="meta"><span style="color:var(--fof-slate-500)">Ages 6–12 · 8 weeks</span><span class="price">$189</span></div>
-      </a>
-      <a href="register/index.html" class="sport-card">
-        <span class="pill" style="background:#C2410C">Basketball</span>
-        <i class="ph ph-basketball sport-icon" style="color:#C2410C"></i>
-        <h3>Basketball</h3>
-        <p>Indoor at Charlotte Christian gym. Adjusted hoops by age group.</p>
-        <div class="meta"><span style="color:var(--fof-slate-500)">Ages 5–12 · 8 weeks</span><span class="price">$199</span></div>
-      </a>
-      <a href="register/index.html" class="sport-card">
-        <span class="pill" style="background:#1E40AF">Baseball</span>
-        <i class="ph ph-baseball sport-icon" style="color:#1E40AF"></i>
-        <h3>T-ball &amp; Baseball</h3>
-        <p>T-ball for the littles, coach-pitch &amp; kid-pitch as they grow.</p>
-        <div class="meta"><span style="color:var(--fof-slate-500)">Ages 5–12 · 8 weeks</span><span class="price">$179</span></div>
-      </a>
-      <a href="register/index.html" class="sport-card">
-        <span class="pill" style="background:#7C3AED">Volleyball</span>
-        <i class="ph ph-volleyball sport-icon" style="color:#7C3AED"></i>
-        <h3>Volleyball</h3>
-        <p>Lower nets and softer balls. Best for kids 8 and up.</p>
-        <div class="meta"><span style="color:var(--fof-slate-500)">Ages 8–12 · 8 weeks</span><span class="price">$169</span></div>
-      </a>
-      <a href="register/index.html" class="sport-card">
-        <span class="pill" style="background:#DB2777">Cheer</span>
-        <i class="ph ph-confetti sport-icon" style="color:#DB2777"></i>
-        <h3>Cheer</h3>
-        <p>Sideline cheer at flag football games. Routines, friends, fun.</p>
-        <div class="meta"><span style="color:var(--fof-slate-500)">Ages 5–10 · 8 weeks</span><span class="price">$159</span></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="how">
-  <div class="container">
-    <div class="eyebrow">How it works</div>
-    <h2 class="section-h2">From sign-up to Saturday in three steps.</h2>
-
-    <div class="how-grid">
-      <div class="step">
-        <span class="num">1</span>
-        <h3>Pick a sport &amp; season</h3>
-        <p>Find a season near you. We post location, dates, and price up front. No hidden fees.</p>
-      </div>
-      <div class="step">
-        <span class="num">2</span>
-        <h3>Register in five minutes</h3>
-        <p>Player info, parent contact, jersey size, pay. We email you a confirmation that same day.</p>
-      </div>
-      <div class="step">
-        <span class="num">3</span>
-        <h3>Get matched, hit the field</h3>
-        <p>Coach reaches out a week before opening day with practice time. Show up. Play.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="testi-section" id="parents">
-  <div class="container">
-    <div class="eyebrow">Parents say it best</div>
-    <h2 class="section-h2">The Saturday everyone looks forward to.</h2>
-
-    <div class="testi-grid">
-      <div class="quote">
-        <blockquote>"They actually teach the fundamentals. My 6-year-old went from afraid of the ball to scoring goals in eight weeks."</blockquote>
-        <div class="author">
-          <div class="avatar" style="background:linear-gradient(135deg,#FFE7A8,#E8853A)">MR</div>
-          <div class="who">Marcus R.<span class="role">Soccer dad · Ballantyne</span></div>
-        </div>
-      </div>
-      <div class="quote">
-        <blockquote>"I love that every kid plays — no benchwarmers. Coach Tia treats them all like they're going to the pros."</blockquote>
-        <div class="author">
-          <div class="avatar" style="background:linear-gradient(135deg,#BFD0EE,#2E5DB8);color:#fff">JL</div>
-          <div class="who">Jamie L.<span class="role">T-ball mom · NoDa</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section style="padding:0" id="about">
-  <div class="cta-strip">
-    <div class="cta-strip-inner">
-      <h2>Spring registration is open. Spots fill fast.</h2>
-      <a href="register/index.html" class="btn btn-secondary">Register your kid <span style="font-size:18px">→</span></a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="foot-inner">
-    <div>
-      <img src="assets/logo-mark.svg" width="56" height="56" alt="FOF Sports">
-      <p class="foot-tagline">FOF Sports — Focus On Fundamentals. Youth recreational sports for ages 5–12 in Charlotte, NC.</p>
-    </div>
-    <div>
-      <h4>Sports</h4>
-      <ul>
-        <li><a href="register/index.html">Soccer</a></li>
-        <li><a href="register/index.html">Flag football</a></li>
-        <li><a href="register/index.html">Basketball</a></li>
-        <li><a href="register/index.html">T-ball</a></li>
-        <li><a href="register/index.html">Volleyball</a></li>
-        <li><a href="register/index.html">Cheer</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Parents</h4>
-      <ul>
-        <li><a href="register/index.html">Find a league</a></li>
-        <li><a href="dashboard/index.html">Schedule</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Refund policy</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>League</h4>
-      <ul>
-        <li><a href="#">About FOF</a></li>
-        <li><a href="coach/index.html">Coach with us</a></li>
-        <li><a href="#">Sponsor</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot-base">
-    <div>© 2026 FOF Sports · Charlotte, NC</div>
-    <div>Privacy · Terms · Accessibility</div>
-  </div>
-</footer>
-
-<script>lucide.createIcons();</script>
-</body>
-</html>
+Program
+Home
+Season Schedule
+Sports Offered
+Registration
+Contact
+Sessions
+Fall Session A
+Fall Session B
+Winter Session A
+Winter Session B
+Spring Session
+© 2026 Brantley Sports Group LLC · F.O.F. Youth Sports · Charlotte, NC
+@fofyouthsports
+@fofyouthfoundation
