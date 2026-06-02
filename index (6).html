@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F.O.F. Youth Sports — Focus On Fundamentals | Charlotte, NC</title>
+<meta name="description" content="F.O.F. Youth Sports — Focus On Fundamentals. Charlotte's premier youth Saturday sports league for grades K–8 at Corvian Community School. Basketball, Soccer, Flag Football, Volleyball, Cheer, Tee Ball & F.O.F. Combine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:     #0A1F44;
+  --navy-mid: #1A3060;
+  --gold:     #D4A017;
+  --gold-lt:  #FFF8DC;
+  --gold-mid: #F5D87A;
+  --green:    #145A32;
+  --green-lt: #D5F5E3;
+  --orange:   #C96010;
+  --orange-lt:#FDECD9;
+  --red:      #C03022;
+  --red-lt:   #FFE8E5;
+  --teal:     #0C6E7A;
+  --teal-lt:  #D8F2F5;
+  --blue:     #0047AB;
+  --blue-lt:  #D6E8FF;
+  --white:    #FFFFFF;
+  --off:      #F8F5EF;
+  --ltgray:   #F0EDE6;
+  --midgray:  #888888;
+  --dkgray:   #2D2D2D;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--off); color: var(--dkgray); overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(10,31,68,0.97); backdrop-filter: blur(12px);
+  border-bottom: 3px solid var(--gold);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%;  height: 64px;
+}
+.nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-logo {
+  width: 40px; height: 40px; border-radius: 8px;
+  background: var(--gold); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 900; font-size: 16px; color: var(--navy); letter-spacing: -0.5px;
+}
+.nav-title { font-family: var(--font-display); font-weight: 800; font-size: 20px; color: var(--white); letter-spacing: 1px; }
+.nav-links { display: flex; gap: 6px; }
+.nav-links a {
+  color: rgba(255,255,255,0.75); text-decoration: none; font-weight: 600;
+  font-size: 13px; padding: 6px 14px; border-radius: 6px; letter-spacing: 0.5px;
+  transition: all 0.2s; text-transform: uppercase;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--white); background: rgba(255,255,255,0.12); }
+.nav-cta {
+  background: var(--gold); color: var(--navy); font-weight: 800; font-size: 13px;
+  padding: 8px 18px; border-radius: 8px; text-decoration: none; letter-spacing: 0.5px;
+  transition: all 0.2s; text-transform: uppercase;
+}
+.nav-cta:hover { background: var(--gold-mid); transform: translateY(-1px); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; border-radius: 2px; }
+
+/* ── PAGES ── */
+.page { display: none; padding-top: 64px; min-height: 100vh; }
+.page.active { display: block; }
+
+/* ── HOME ── */
+.hero {
+  position: relative; overflow: hidden;
+  background: var(--navy); min-height: 100vh;
+  display: flex; align-items: center;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(212,160,23,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(12,110,122,0.2) 0%, transparent 50%),
+              radial-gradient(ellipse at 60% 80%, rgba(0,71,171,0.15) 0%, transparent 50%);
+}
+.hero-grid {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image: linear-gradient(var(--white) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--white) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-diagonal {
+  position: absolute; right: -100px; top: 0; bottom: 0; width: 50%;
+  background: linear-gradient(135deg, transparent 0%, rgba(212,160,23,0.08) 100%);
+  transform: skewX(-6deg);
+}
+.hero-content {
+  position: relative; z-index: 2; padding: 0 5%; max-width: 1200px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.hero-eyebrow {
+  font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 4px;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow::before { content: ''; display: block; width: 30px; height: 2px; background: var(--gold); }
+.hero-title {
+  font-family: var(--font-display); font-size: clamp(52px, 8vw, 88px); font-weight: 900;
+  color: var(--white); line-height: 0.9; letter-spacing: -1px; margin-bottom: 8px;
+}
+.hero-title span { color: var(--gold); display: block; }
+.hero-subtitle {
+  font-family: var(--font-display); font-size: clamp(18px, 3vw, 26px); font-weight: 600;
+  color: rgba(255,255,255,0.6); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px;
+}
+.hero-desc {
+  font-size: 16px; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 36px; max-width: 480px;
+}
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--gold); color: var(--navy); font-weight: 800; font-size: 15px;
+  padding: 14px 32px; border-radius: 10px; text-decoration: none; letter-spacing: 0.5px;
+  transition: all 0.2s; display: inline-block; text-transform: uppercase;
+  box-shadow: 0 6px 24px rgba(212,160,23,0.4);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(212,160,23,0.5); }
+.btn-outline {
+  border: 2px solid rgba(255,255,255,0.3); color: var(--white); font-weight: 700; font-size: 15px;
+  padding: 13px 28px; border-radius: 10px; text-decoration: none; letter-spacing: 0.5px;
+  transition: all 0.2s; display: inline-block; text-transform: uppercase;
+}
+.btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+
+/* Hero right side — stat cards */
+.hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.stat-card {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px; padding: 20px; backdrop-filter: blur(10px);
+  transition: all 0.3s; cursor: default;
+}
+.stat-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
+.stat-card.gold-card { background: rgba(212,160,23,0.15); border-color: rgba(212,160,23,0.3); }
+.stat-num { font-family: var(--font-display); font-size: 48px; font-weight: 900; color: var(--gold); line-height: 1; }
+.stat-label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px; }
+
+/* scroll indicator */
+.scroll-hint {
+  position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+.scroll-arrow { width: 20px; height: 20px; border-right: 2px solid rgba(255,255,255,0.3); border-bottom: 2px solid rgba(255,255,255,0.3); transform: rotate(45deg); }
+
+/* ── SECTION STYLES ── */
+.section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 56px; }
+.section-eyebrow {
+  font-family: var(--font-display); font-size: 12px; font-weight: 700; letter-spacing: 4px;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 10px;
+}
+.section-title {
+  font-family: var(--font-display); font-size: clamp(32px, 5vw, 52px); font-weight: 900;
+  color: var(--navy); line-height: 1; letter-spacing: -0.5px; margin-bottom: 14px;
+}
+.section-sub { font-size: 16px; color: var(--midgray); max-width: 560px; margin: 0 auto; line-height: 1.6; }
+
+/* Gold divider */
+.gold-divider { width: 60px; height: 4px; background: var(--gold); border-radius: 2px; margin: 0 auto 20px; }
+
+/* ── SESSION CARDS ── */
+.sessions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.session-card {
+  border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  transition: all 0.3s; cursor: default;
+}
+.session-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.15); }
+.session-header { padding: 20px 22px 16px; }
+.session-tag {
+  font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 6px;
+}
+.session-name { font-family: var(--font-display); font-size: 26px; font-weight: 900; color: var(--white); margin-bottom: 4px; }
+.session-dates { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 600; }
+.session-body { background: var(--white); padding: 18px 22px; }
+.session-sports { font-size: 13px; color: var(--dkgray); line-height: 1.5; margin-bottom: 10px; }
+.session-badge {
+  display: inline-block; font-size: 12px; font-weight: 700; padding: 4px 10px;
+  border-radius: 20px; background: var(--off); color: var(--midgray);
+}
+
+/* ── PROGRAM PILLARS ── */
+.pillars-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+.pillar {
+  background: var(--white); border-radius: 16px; padding: 28px 24px;
+  border-bottom: 4px solid var(--gold); box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: all 0.3s;
+}
+.pillar:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+.pillar-icon { font-size: 32px; margin-bottom: 14px; }
+.pillar-title { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+.pillar-text { font-size: 14px; color: var(--midgray); line-height: 1.6; }
+
+/* ── SCHEDULE PAGE ── */
+.timeline { position: relative; padding-left: 40px; }
+.timeline::before {
+  content: ''; position: absolute; left: 14px; top: 0; bottom: 0; width: 3px;
+  background: linear-gradient(to bottom, var(--gold), var(--navy)); border-radius: 2px;
+}
+.timeline-item { position: relative; margin-bottom: 8px; }
+.timeline-dot {
+  position: absolute; left: -34px; top: 16px; width: 16px; height: 16px;
+  border-radius: 50%; border: 3px solid var(--white); box-shadow: 0 0 0 2px currentColor;
+  z-index: 1;
+}
+.timeline-card {
+  background: var(--white); border-radius: 12px; padding: 16px 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-left: 4px solid currentColor;
+  transition: all 0.2s;
+}
+.timeline-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.12); transform: translateX(4px); }
+.timeline-session { font-family: var(--font-display); font-size: 18px; font-weight: 800; margin-bottom: 2px; }
+.timeline-dates { font-size: 13px; font-weight: 700; color: var(--midgray); margin-bottom: 6px; }
+.timeline-sports { font-size: 13px; color: var(--dkgray); }
+.timeline-note { font-size: 12px; color: var(--midgray); font-style: italic; margin-top: 4px; }
+
+.months-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.month-card { background: var(--white); border-radius: 14px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+.month-header { background: var(--navy); padding: 12px 16px; }
+.month-title { font-family: var(--font-display); font-weight: 800; font-size: 16px; color: var(--white); }
+.month-days { display: grid; grid-template-columns: repeat(7,1fr); }
+.day-header { background: var(--gold); color: var(--navy); font-size: 9px; font-weight: 800; text-align: center; padding: 4px 0; }
+.day-cell { min-height: 48px; border: 0.5px solid #EEE; padding: 3px; font-size: 10px; }
+.day-cell.empty { background: #FAFAFA; }
+.day-cell.saturday { background: #F5F2EC; }
+.day-num { font-weight: 700; color: #AAA; font-size: 10px; }
+.day-cell.has-event .day-num { color: var(--white); }
+.event-pill {
+  margin-top: 2px; border-radius: 3px; padding: 2px 3px;
+  font-size: 7px; font-weight: 800; color: var(--white); line-height: 1.3;
+}
+
+/* ── SPORTS PAGE ── */
+.sports-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+.sport-card {
+  background: var(--white); border-radius: 20px; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s;
+}
+.sport-card:hover { transform: translateY(-8px); box-shadow: 0 20px 48px rgba(0,0,0,0.15); }
+.sport-banner { height: 100px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.sport-icon { font-size: 48px; position: relative; z-index: 2; }
+.sport-banner-pattern {
+  position: absolute; inset: 0; opacity: 0.15;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.5) 10px, rgba(255,255,255,0.5) 11px);
+}
+.sport-body { padding: 20px 22px; }
+.sport-name { font-family: var(--font-display); font-size: 24px; font-weight: 900; color: var(--navy); margin-bottom: 6px; }
+.sport-desc { font-size: 14px; color: var(--midgray); line-height: 1.6; margin-bottom: 14px; }
+.sport-sessions { display: flex; flex-wrap: wrap; gap: 6px; }
+.sport-tag {
+  font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px;
+  color: var(--white);
+}
+
+/* ── REGISTRATION PAGE ── */
+.reg-hero {
+  background: var(--navy); padding: 80px 5%; text-align: center;
+  position: relative; overflow: hidden;
+}
+.reg-hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.2) 0%, transparent 70%);
+}
+.reg-hero h1 { font-family: var(--font-display); font-size: clamp(40px, 6vw, 72px); font-weight: 900; color: var(--white); position: relative; }
+.reg-hero p { font-size: 18px; color: rgba(255,255,255,0.7); margin-top: 12px; position: relative; }
+.price-pill {
+  display: inline-block; background: var(--gold); color: var(--navy);
+  font-family: var(--font-display); font-size: 28px; font-weight: 900;
+  padding: 10px 28px; border-radius: 100px; margin: 20px 0; position: relative;
+}
+
+.session-reg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin: 40px 0; }
+.reg-session-card {
+  background: var(--white); border-radius: 16px; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s;
+}
+.reg-session-card:hover { transform: translateY(-4px); }
+.reg-session-top { padding: 18px 20px 14px; color: var(--white); }
+.reg-session-name { font-family: var(--font-display); font-size: 22px; font-weight: 900; }
+.reg-session-dates { font-size: 13px; opacity: 0.85; font-weight: 600; margin-top: 2px; }
+.reg-session-body { padding: 14px 20px 18px; }
+.reg-session-sports { font-size: 13px; color: var(--dkgray); line-height: 1.5; margin-bottom: 12px; }
+.reg-btn {
+  display: block; text-align: center; font-weight: 800; font-size: 13px;
+  padding: 10px; border-radius: 8px; text-decoration: none;
+  text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.2s;
+  color: var(--white);
+}
+.reg-btn:hover { opacity: 0.85; transform: scale(1.02); }
+
+.process-steps { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin-top: 48px; }
+.process-step { text-align: center; padding: 24px 16px; }
+.step-num {
+  width: 48px; height: 48px; border-radius: 50%; background: var(--navy);
+  color: var(--gold); font-family: var(--font-display); font-size: 22px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 14px;
+}
+.step-title { font-family: var(--font-display); font-size: 16px; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+.step-desc { font-size: 13px; color: var(--midgray); line-height: 1.5; }
+
+/* ── CONTACT PAGE ── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.contact-info { }
+.contact-card {
+  background: var(--white); border-radius: 16px; padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07); margin-bottom: 16px;
+  display: flex; align-items: flex-start; gap: 16px;
+}
+.contact-icon {
+  width: 44px; height: 44px; border-radius: 10px; background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.contact-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--midgray); margin-bottom: 4px; }
+.contact-value { font-size: 15px; font-weight: 700; color: var(--navy); }
+.contact-sub { font-size: 13px; color: var(--midgray); margin-top: 2px; }
+
+.contact-form { background: var(--white); border-radius: 20px; padding: 36px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+.form-title { font-family: var(--font-display); font-size: 28px; font-weight: 900; color: var(--navy); margin-bottom: 24px; }
+.form-group { margin-bottom: 18px; }
+.form-label { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; letter-spacing: 0.3px; }
+.form-input, .form-select, .form-textarea {
+  width: 100%; padding: 12px 14px; border-radius: 10px;
+  border: 1.5px solid #D5CFC4; background: var(--off);
+  font-family: var(--font-body); font-size: 15px; color: var(--dkgray);
+  outline: none; transition: all 0.2s;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--navy); background: var(--white); box-shadow: 0 0 0 3px rgba(10,31,68,0.1);
+}
+.form-textarea { resize: vertical; min-height: 120px; }
+.form-submit {
+  width: 100%; background: var(--navy); color: var(--white); font-weight: 800;
+  font-size: 15px; padding: 14px; border: none; border-radius: 10px; cursor: pointer;
+  font-family: var(--font-body); letter-spacing: 0.5px; text-transform: uppercase;
+  transition: all 0.2s; box-shadow: 0 4px 16px rgba(10,31,68,0.3);
+}
+.form-submit:hover { background: var(--navy-mid); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(10,31,68,0.4); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy); color: rgba(255,255,255,0.65);
+  padding: 48px 5% 24px; margin-top: 80px;
+  border-top: 4px solid var(--gold);
+}
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-brand-name { font-family: var(--font-display); font-size: 24px; font-weight: 900; color: var(--white); margin-bottom: 4px; }
+.footer-brand-sub { font-size: 13px; color: var(--gold); font-style: italic; margin-bottom: 14px; }
+.footer-brand-desc { font-size: 13px; line-height: 1.6; }
+.footer-col-title { font-family: var(--font-display); font-size: 14px; font-weight: 800; color: var(--white); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+.footer-link { display: block; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; margin-bottom: 8px; transition: color 0.2s; }
+.footer-link:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 12px; }
+.footer-social { display: flex; gap: 10px; }
+.social-chip {
+  background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); padding: 6px 12px;
+  border-radius: 20px; font-size: 11px; font-weight: 700; text-decoration: none;
+  transition: all 0.2s; letter-spacing: 0.5px;
+}
+.social-chip:hover { background: var(--gold); color: var(--navy); }
+
+/* ── UTILITY ── */
+.bg-navy { background: var(--navy); }
+.bg-off  { background: var(--off);  }
+.text-center { text-align: center; }
+.mb-0 { margin-bottom: 0; }
+
+/* ── COMBINE BANNER ── */
+.combine-banner {
+  background: linear-gradient(135deg, var(--blue) 0%, #003080 100%);
+  border-radius: 20px; padding: 40px 48px;
+  display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: center;
+  box-shadow: 0 8px 40px rgba(0,71,171,0.3); margin: 48px 0;
+  position: relative; overflow: hidden;
+}
+.combine-banner::before {
+  content: '★'; position: absolute; right: -20px; top: -30px;
+  font-size: 160px; opacity: 0.06; color: var(--white); line-height: 1;
+}
+.combine-title { font-family: var(--font-display); font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: var(--white); margin-bottom: 8px; }
+.combine-sub { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+.combine-tag { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: var(--white); padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; display: inline-block; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-content > * { animation: fadeUp 0.6s ease forwards; }
+.hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.3s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: var(--navy); padding: 20px; gap: 4px; border-bottom: 2px solid var(--gold); z-index: 999; }
+  .hamburger { display: flex; }
+  .hero-content { grid-template-columns: 1fr; gap: 40px; padding: 40px 5%; }
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .combine-banner { grid-template-columns: 1fr; }
+  .nav-cta { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-brand" href="#" onclick="showPage('home')">
+    <div class="nav-logo">FOF</div>
+    <span class="nav-title">F.O.F. YOUTH SPORTS</span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#" onclick="showPage('home')"     class="active" id="nav-home">Home</a>
+    <a href="#" onclick="showPage('schedule')" id="nav-schedule">Schedule</a>
+    <a href="#" onclick="showPage('sports')"   id="nav-sports">Sports</a>
+    <a href="#" onclick="showPage('register')" id="nav-register">Register</a>
+    <a href="#" onclick="showPage('contact')"  id="nav-contact">Contact</a>
+  </div>
+  <a class="nav-cta" href="#" onclick="showPage('register')">Register Now →</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ════════════════ HOME PAGE ════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-diagonal"></div>
+    <div class="hero-content">
+      <div>
+        <div class="hero-eyebrow">Charlotte, NC · Corvian Community School</div>
+        <h1 class="hero-title">FOCUS ON<span>FUNDAMENTALS</span></h1>
+        <div class="hero-subtitle">F.O.F. Youth Sports · Grades K–8</div>
+        <p class="hero-desc">Charlotte's premier Saturday youth sports league. Five sessions, seven sports, one community. Building athletes and champions from Kindergarten through 8th grade — every Saturday, all year long.</p>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary" onclick="showPage('register')">Register for 2026–2027 →</a>
+          <a href="#" class="btn-outline" onclick="showPage('schedule')">View Schedule</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card gold-card">
+          <div class="stat-num">25</div>
+          <div class="stat-label">Game Saturdays</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">7</div>
+          <div class="stat-label">Sports & Programs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">K–8</div>
+          <div class="stat-label">All Grades Welcome</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">$150</div>
+          <div class="stat-label">Per Session</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint"><div class="scroll-arrow"></div>Scroll</div>
+  </section>
+
+  <!-- Sessions Overview -->
+  <div style="background:var(--off); padding: 80px 0;">
+    <div class="section" style="padding-top:0;padding-bottom:0;">
+      <div class="section-header">
+        <div class="section-eyebrow">2026 – 2027 Season</div>
+        <h2 class="section-title">FIVE SEASONS. ONE PROGRAM.</h2>
+        <div class="gold-divider"></div>
+        <p class="section-sub">Every session runs five Saturdays with a Championship Day closing each block. Register by session — never a long-term commitment.</p>
+      </div>
+      <div class="sessions-grid">
+        <div class="session-card">
+          <div class="session-header" style="background:var(--orange)">
+            <div class="session-tag">Fall Season</div>
+            <div class="session-name">FALL SESSION A</div>
+            <div class="session-dates">Sep 19 – Oct 17, 2026</div>
+          </div>
+          <div class="session-body">
+            <p class="session-sports">Basketball · Soccer · Flag Football · Cheer · Tee Ball</p>
+            <span class="session-badge">5 Saturdays · Championship Day Oct 17</span>
+          </div>
+        </div>
+        <div class="session-card">
+          <div class="session-header" style="background:var(--red)">
+            <div class="session-tag">Fall Season</div>
+            <div class="session-name">FALL SESSION B</div>
+            <div class="session-dates">Nov 7 – Dec 12, 2026</div>
+          </div>
+          <div class="session-body">
+            <p class="session-sports">Basketball · Volleyball · Cheer</p>
+            <span class="session-badge">5 Saturdays + Bye · Championship Dec 12</span>
+          </div>
+        </div>
+        <div class="session-card">
+          <div class="session-header" style="background:var(--teal)">
+            <div class="session-tag">Winter Season</div>
+            <div class="session-name">WINTER SESSION A</div>
+            <div class="session-dates">Jan 9 – Feb 6, 2027</div>
+          </div>
+          <div class="session-body">
+            <p class="session-sports">Basketball · Volleyball · F.O.F. Combine ★</p>
+            <span class="session-badge">5 Saturdays · Championship Feb 6</span>
+          </div>
+        </div>
+        <div class="session-card">
+          <div class="session-header" style="background:var(--blue)">
+            <div class="session-tag">Winter Season</div>
+            <div class="session-name">WINTER SESSION B</div>
+            <div class="session-dates">Feb 20 – Mar 20, 2027</div>
+          </div>
+          <div class="session-body">
+            <p class="session-sports">Basketball · Volleyball · F.O.F. Combine ★</p>
+            <span class="session-badge">5 Saturdays · Championship Mar 20</span>
+          </div>
+        </div>
+        <div class="session-card">
+          <div class="session-header" style="background:var(--green)">
+            <div class="session-tag">Spring Season</div>
+            <div class="session-name">SPRING SESSION</div>
+            <div class="session-dates">Apr 17 – May 22, 2027</div>
+          </div>
+          <div class="session-body">
+            <p class="session-sports">Basketball · Soccer · Flag Football · Cheer · Tee Ball</p>
+            <span class="session-badge">5 Saturdays + Bye · Season Finale May 22</span>
+          </div>
+        </div>
+        <div class="session-card" style="cursor:pointer" onclick="showPage('register')">
+          <div class="session-header" style="background:var(--navy); display:flex; align-items:center; justify-content:center; min-height:110px;">
+            <div style="text-align:center">
+              <div style="font-size:36px; margin-bottom:8px;">🏆</div>
+              <div class="session-name" style="font-size:20px;">READY TO JOIN?</div>
+            </div>
+          </div>
+          <div class="session-body" style="text-align:center; padding: 22px;">
+            <p class="session-sports" style="margin-bottom:14px">$150 per session · Grades K–8 · All skill levels welcome</p>
+            <div style="background:var(--gold); color:var(--navy); font-weight:800; padding:10px 20px; border-radius:8px; font-size:14px; text-transform:uppercase; letter-spacing:0.5px;">Register Now →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- F.O.F. Combine -->
+  <div style="background:var(--white); padding: 80px 0;">
+    <div class="section" style="padding-top:0;padding-bottom:0;">
+      <div class="combine-banner">
+        <div>
+          <div class="combine-tag">New This Season — Winter A & B Only</div>
+          <div class="combine-title">F.O.F. COMBINE</div>
+          <p class="combine-sub">The only athletic development program of its kind in Charlotte youth sports. Speed, agility, strength, coordination, and sport transfer training that makes every athlete better at every sport they play. Running exclusively during Winter sessions A and B.</p>
+        </div>
+        <div style="text-align:center; flex-shrink:0;">
+          <div style="font-family:var(--font-display); font-size:56px; font-weight:900; color:var(--white); line-height:1;">$50</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">Add-On / Session</div>
+          <a href="#" onclick="showPage('register')" style="background:var(--white); color:var(--blue); font-weight:800; font-size:13px; padding:10px 24px; border-radius:8px; text-decoration:none; display:block; text-transform:uppercase; letter-spacing:0.5px;">Add to Registration →</a>
+        </div>
+      </div>
+
+      <!-- Pillars -->
+      <div class="section-header" style="margin-top:60px;">
+        <div class="section-eyebrow">Program Pillars</div>
+        <h2 class="section-title">WHAT WE DEVELOP</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar"><div class="pillar-icon">⚡</div><div class="pillar-title">SPEED</div><div class="pillar-text">Linear acceleration, burst speed, and sport-specific explosive movement patterns.</div></div>
+        <div class="pillar"><div class="pillar-icon">🔄</div><div class="pillar-title">AGILITY</div><div class="pillar-text">Change of direction, reaction time, and lateral quickness that transfers to every sport.</div></div>
+        <div class="pillar"><div class="pillar-icon">💪</div><div class="pillar-title">STRENGTH</div><div class="pillar-text">Functional bodyweight strength, core stability, and joint integrity — age-appropriate always.</div></div>
+        <div class="pillar"><div class="pillar-icon">🎯</div><div class="pillar-title">COORDINATION</div><div class="pillar-text">Multi-limb coordination, rhythm, and body awareness that makes athleticism visible.</div></div>
+        <div class="pillar"><div class="pillar-icon">🏀</div><div class="pillar-title">SPORT TRANSFER</div><div class="pillar-text">Every Combine session ends by connecting training directly to live sport situations.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Coach -->
+  <div style="background:var(--navy); padding: 80px 0;">
+    <div class="section" style="padding-top:0;padding-bottom:0;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+        <div>
+          <div style="font-family:var(--font-display); font-size:12px; font-weight:700; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:10px;">Founder & Program Director</div>
+          <h2 style="font-family:var(--font-display); font-size:clamp(36px,5vw,56px); font-weight:900; color:var(--white); line-height:1; margin-bottom:20px;">COACH JEFFERY BRANTLEY</h2>
+          <p style="color:rgba(255,255,255,0.75); font-size:15px; line-height:1.8; margin-bottom:20px;">Coach Brantley brings over a decade of youth athletic administration to F.O.F. Youth Sports. As a Physical Education Teacher and Head Basketball Coach at Corvian Community School — where he led the Cardinals to the 2025 North Carolina State Basketball Championship — Coach Brantley has spent his career building athletes and communities.</p>
+          <p style="color:rgba(255,255,255,0.65); font-size:14px; line-height:1.8; margin-bottom:28px;">His vision for F.O.F. is rooted in a simple belief: every child deserves structured, professional athletic development — not just the ones at elite academies.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <span style="background:rgba(212,160,23,0.2); border:1px solid rgba(212,160,23,0.4); color:var(--gold); padding:6px 14px; border-radius:20px; font-size:12px; font-weight:700;">2025 NC State Champions</span>
+            <span style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.8); padding:6px 14px; border-radius:20px; font-size:12px; font-weight:700;">M.A.T. Physical Education</span>
+            <span style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.8); padding:6px 14px; border-radius:20px; font-size:12px; font-weight:700;">10+ Yrs Athletic Admin</span>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div style="background:rgba(255,255,255,0.06); border-radius:16px; padding:24px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
+            <div style="font-family:var(--font-display); font-size:40px; font-weight:900; color:var(--gold);">10+</div>
+            <div style="font-size:12px; color:rgba(255,255,255,0.55); text-transform:uppercase; letter-spacing:0.8px; margin-top:4px;">Years Athletic Admin</div>
+          </div>
+          <div style="background:rgba(212,160,23,0.15); border-radius:16px; padding:24px; text-align:center; border:1px solid rgba(212,160,23,0.3);">
+            <div style="font-family:var(--font-display); font-size:40px; font-weight:900; color:var(--gold);">🏆</div>
+            <div style="font-size:12px; color:rgba(255,255,255,0.55); text-transform:uppercase; letter-spacing:0.8px; margin-top:4px;">2025 State Champs</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.06); border-radius:16px; padding:24px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
+            <div style="font-family:var(--font-display); font-size:40px; font-weight:900; color:var(--gold);">$150K+</div>
+            <div style="font-size:12px; color:rgba(255,255,255,0.55); text-transform:uppercase; letter-spacing:0.8px; margin-top:4px;">Facility Grants Secured</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.06); border-radius:16px; padding:24px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
+            <div style="font-family:var(--font-display); font-size:40px; font-weight:900; color:var(--gold);">4.0</div>
+            <div style="font-size:12px; color:rgba(255,255,255,0.55); text-transform:uppercase; letter-spacing:0.8px; margin-top:4px;">Graduate GPA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ════════════════ SCHEDULE PAGE ════════════════ -->
+<div class="page" id="page-schedule">
+  <div style="background:var(--navy); padding:60px 5%; text-align:center; position:relative; overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.2) 0%, transparent 70%);"></div>
+    <div style="position:relative;">
+      <div style="font-family:var(--font-display); font-size:12px; font-weight:700; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:10px;">2026–2027 Program Year</div>
+      <h1 style="font-family:var(--font-display); font-size:clamp(40px,7vw,72px); font-weight:900; color:var(--white); line-height:1; margin-bottom:12px;">MASTER SCHEDULE</h1>
+      <p style="color:rgba(255,255,255,0.7); font-size:16px;">Every Saturday. Every session. Full year at a glance.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">Season Timeline</div>
+      <h2 class="section-title">ALL FIVE SESSIONS</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;">
+      <div class="timeline">
+        <div class="timeline-item" style="color:var(--teal)">
+          <div class="timeline-dot" style="background:var(--teal)"></div>
+          <div class="timeline-card" style="color:var(--teal); border-left-color:var(--teal)">
+            <div class="timeline-session">PRE-SEASON CLINICS</div>
+            <div class="timeline-dates">Sep 5 & Sep 12, 2026</div>
+            <div class="timeline-sports">All Sports Demo · Draft Day · Team Formation</div>
+            <div class="timeline-note">Free entry · Open to all incoming athletes</div>
+          </div>
+        </div>
+        <div class="timeline-item" style="color:var(--orange)">
+          <div class="timeline-dot" style="background:var(--orange)"></div>
+          <div class="timeline-card" style="border-left-color:var(--orange)">
+            <div class="timeline-session" style="color:var(--orange)">FALL SESSION A</div>
+            <div class="timeline-dates">Sep 19 · Sep 26 · Oct 3 · Oct 10 · Oct 17, 2026</div>
+            <div class="timeline-sports">Basketball · Soccer · Flag Football · Cheer · Tee Ball</div>
+            <div class="timeline-note">Championship Day: Oct 17 · Break: Oct 24 & Oct 31</div>
+          </div>
+        </div>
+        <div class="timeline-item" style="color:var(--red)">
+          <div class="timeline-dot" style="background:var(--red)"></div>
+          <div class="timeline-card" style="border-left-color:var(--red)">
+            <div class="timeline-session" style="color:var(--red)">FALL SESSION B</div>
+            <div class="timeline-dates">Nov 7 · Nov 14 · Nov 21 · Dec 5 · Dec 12, 2026</div>
+            <div class="timeline-sports">Basketball · Volleyball · Cheer</div>
+            <div class="timeline-note">Bye Week: Nov 28 (Thanksgiving) · Championship: Dec 12</div>
+          </div>
+        </div>
+        <div class="timeline-item" style="color:var(--midgray)">
+          <div class="timeline-dot" style="background:var(--midgray)"></div>
+          <div class="timeline-card" style="border-left-color:var(--midgray); background:#F8F8F8;">
+            <div class="timeline-session" style="color:var(--midgray)">CHRISTMAS BREAK</div>
+            <div class="timeline-dates">Dec 19 · Dec 26, 2026 · Jan 2, 2027</div>
+            <div class="timeline-sports" style="color:var(--midgray)">No Sessions · Happy Holidays!</div>
+          </div>
+        </div>
+        <div class="timeline-item" style="color:var(--teal)">
+          <div class="timeline-dot" style="background:var(--teal)"></div>
+          <div class="timeline-card" style="border-left-color:var(--teal)">
+            <div class="timeline-session" style="color:var(--teal)">WINTER SESSION A</div>
+            <div class="timeline-dates">Jan 9 · Jan 16 · Jan 23 · Jan 30 · Feb 6, 2027</div>
+            <div class="timeline-sports">Basketball · Volleyball · <strong style="color:var(--blue)">F.O.F. Combine ★</strong></div>
+            <div class="timeline-note">Combine debuts · Championship + Showcase: Feb 6</div>
+          </div>
+        </div>
+        <div class="timeline-item" style="color:var(--blue)">
+          <div class="timeline-dot" style="background:var(--blue)"></div>
+          <div class="timeline-card" style="border-left-color:var(--blue)">
+            <div class="timeline-session" style="color:var(--blue)">WINTER SESSION B</div>
+            <div class="timeline-dates">Feb 20 · Feb 27 · Mar 6 · Mar 13 · Mar 20, 2027</div>
+            <div class="timeline-sports">Basketball · <strong style="color:var(--blue)">F.O.F. Combine ★</strong> · Volleyball</div>
+            <div class="timeline-note">Combine advances · Championship + Finale: Mar 20</div>
+          </div>
+        </div>
+        <div class="timeline-item" style="color:var(--midgray)">
+          <div class="timeline-dot" style="background:var(--midgray)"></div>
+          <div class="timeline-card" style="border-left-color:var(--midgray); background:#F8F8F8;">
+            <div class="timeline-session" style="color:var(--midgray)">SPRING BREAK</div>
+            <div class="timeline-dates">Mar 27 · Apr 3 · Apr 10, 2027</div>
+            <div class="timeline-sports" style="color:var(--midgray)">No Sessions · Corvian Spring Break</div>
+          </div>
+        </div>
+        <div class="timeline-item" style="color:var(--green)">
+          <div class="timeline-dot" style="background:var(--green)"></div>
+          <div class="timeline-card" style="border-left-color:var(--green)">
+            <div class="timeline-session" style="color:var(--green)">SPRING / FINAL SESSION</div>
+            <div class="timeline-dates">Apr 17 · Apr 24 · May 1 · May 15 · May 22, 2027</div>
+            <div class="timeline-sports">Basketball · Soccer · Flag Football · Cheer · Tee Ball</div>
+            <div class="timeline-note">Bye Week: May 8 · SEASON FINALE: May 22</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick reference table -->
+      <div>
+        <div style="background:var(--white); border-radius:16px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+          <div style="background:var(--navy); padding:16px 20px;">
+            <div style="font-family:var(--font-display); font-size:18px; font-weight:800; color:var(--white);">GAME DAY INFO</div>
+          </div>
+          <div style="padding:20px;">
+            <div style="margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid var(--ltgray);">
+              <div style="font-size:11px; font-weight:700; color:var(--midgray); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Location</div>
+              <div style="font-weight:700; color:var(--navy); font-size:15px;">Corvian Community School</div>
+              <div style="font-size:13px; color:var(--midgray);">Charlotte, NC</div>
+            </div>
+            <div style="margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid var(--ltgray);">
+              <div style="font-size:11px; font-weight:700; color:var(--midgray); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Day & Time</div>
+              <div style="font-weight:700; color:var(--navy); font-size:15px;">Every Saturday</div>
+              <div style="font-size:13px; color:var(--midgray);">Check-in opens 7:30 AM · Games begin 8:00 AM</div>
+            </div>
+            <div style="margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid var(--ltgray);">
+              <div style="font-size:11px; font-weight:700; color:var(--midgray); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Age Divisions</div>
+              <div style="display:flex; flex-direction:column; gap:6px; margin-top:6px;">
+                <div style="display:flex; justify-content:space-between; font-size:13px;"><span style="font-weight:700; color:var(--navy)">Tiny Ballers</span><span style="color:var(--midgray)">Kindergarten – 1st Grade</span></div>
+                <div style="display:flex; justify-content:space-between; font-size:13px;"><span style="font-weight:700; color:var(--navy)">Rookies</span><span style="color:var(--midgray)">2nd – 3rd Grade</span></div>
+                <div style="display:flex; justify-content:space-between; font-size:13px;"><span style="font-weight:700; color:var(--navy)">Rising</span><span style="color:var(--midgray)">4th – 5th Grade</span></div>
+                <div style="display:flex; justify-content:space-between; font-size:13px;"><span style="font-weight:700; color:var(--navy)">Elite</span><span style="color:var(--midgray)">6th – 8th Grade</span></div>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:11px; font-weight:700; color:var(--midgray); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Registration Fee</div>
+              <div style="background:var(--green-lt); border-radius:10px; padding:14px; text-align:center;">
+                <div style="font-family:var(--font-display); font-size:36px; font-weight:900; color:var(--green);">$150</div>
+                <div style="font-size:12px; color:var(--green); font-weight:600;">Per Session · All Skill Levels</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:20px;">
+          <a href="#" onclick="showPage('register')" class="btn-primary" style="display:inline-block;">Register for the Next Session →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ SPORTS PAGE ════════════════ -->
+<div class="page" id="page-sports">
+  <div style="background:var(--navy); padding:60px 5%; text-align:center; position:relative; overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.2) 0%, transparent 70%);"></div>
+    <div style="position:relative;">
+      <div style="font-family:var(--font-display); font-size:12px; font-weight:700; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:10px;">7 Sports & Programs</div>
+      <h1 style="font-family:var(--font-display); font-size:clamp(40px,7vw,72px); font-weight:900; color:var(--white); line-height:1; margin-bottom:12px;">SPORTS OFFERED</h1>
+      <p style="color:rgba(255,255,255,0.7); font-size:16px;">Something for every athlete. Every session brings a new lineup.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sports-grid">
+      <div class="sport-card">
+        <div class="sport-banner" style="background:var(--navy);">
+          <div class="sport-banner-pattern"></div>
+          <div class="sport-icon">🏀</div>
+        </div>
+        <div class="sport-body">
+          <div class="sport-name">BASKETBALL</div>
+          <p class="sport-desc">F.O.F.'s anchor sport. Fundamentals-first coaching covering jump stops, ball handling, scoring mindset, footwork, and team communication. All four divisions compete.</p>
+          <div class="sport-sessions">
+            <span class="sport-tag" style="background:var(--orange)">Fall A</span>
+            <span class="sport-tag" style="background:var(--red)">Fall B</span>
+            <span class="sport-tag" style="background:var(--teal)">Winter A</span>
+            <span class="sport-tag" style="background:var(--blue)">Winter B</span>
+            <span class="sport-tag" style="background:var(--green)">Spring</span>
+          </div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-banner" style="background:var(--green);">
+          <div class="sport-banner-pattern"></div>
+          <div class="sport-icon">⚽</div>
+        </div>
+        <div class="sport-body">
+          <div class="sport-name">SOCCER</div>
+          <p class="sport-desc">Dribbling, passing, positional play, and small-sided games. Outdoor sport that runs in Fall A and Spring — perfect for athletes who love movement and space.</p>
+          <div class="sport-sessions">
+            <span class="sport-tag" style="background:var(--orange)">Fall A</span>
+            <span class="sport-tag" style="background:var(--green)">Spring</span>
+          </div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-banner" style="background:var(--orange);">
+          <div class="sport-banner-pattern"></div>
+          <div class="sport-icon">🏈</div>
+        </div>
+        <div class="sport-body">
+          <div class="sport-name">FLAG FOOTBALL</div>
+          <p class="sport-desc">Routes, reads, snaps, and pursuit angles. Flag football develops football IQ, coordination, and teamwork in a safe, competitive format. Fall A and Spring only.</p>
+          <div class="sport-sessions">
+            <span class="sport-tag" style="background:var(--orange)">Fall A</span>
+            <span class="sport-tag" style="background:var(--green)">Spring</span>
+          </div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-banner" style="background:var(--teal);">
+          <div class="sport-banner-pattern"></div>
+          <div class="sport-icon">🏐</div>
+        </div>
+        <div class="sport-body">
+          <div class="sport-name">VOLLEYBALL</div>
+          <p class="sport-desc">Serving, passing, setting, and court positioning. Volleyball builds communication, reaction time, and spatial awareness. Runs through both Fall B and Winter sessions.</p>
+          <div class="sport-sessions">
+            <span class="sport-tag" style="background:var(--red)">Fall B</span>
+            <span class="sport-tag" style="background:var(--teal)">Winter A</span>
+            <span class="sport-tag" style="background:var(--blue)">Winter B</span>
+          </div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-banner" style="background:#9C2672;">
+          <div class="sport-banner-pattern"></div>
+          <div class="sport-icon">📣</div>
+        </div>
+        <div class="sport-body">
+          <div class="sport-name">CHEER</div>
+          <p class="sport-desc">Unified cheer program covering routines, formations, teamwork, and performance. Cheer athletes support and perform alongside other F.O.F. sports throughout the season.</p>
+          <div class="sport-sessions">
+            <span class="sport-tag" style="background:var(--orange)">Fall A</span>
+            <span class="sport-tag" style="background:var(--red)">Fall B</span>
+            <span class="sport-tag" style="background:var(--green)">Spring</span>
+          </div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-banner" style="background:var(--gold);">
+          <div class="sport-banner-pattern"></div>
+          <div class="sport-icon">⚾</div>
+        </div>
+        <div class="sport-body">
+          <div class="sport-name">TEE BALL</div>
+          <p class="sport-desc">Hitting, fielding, base running, and love of the game. Tee Ball is designed for the youngest F.O.F. athletes — building baseball fundamentals in a supportive environment.</p>
+          <div class="sport-sessions">
+            <span class="sport-tag" style="background:var(--orange)">Fall A</span>
+            <span class="sport-tag" style="background:var(--green)">Spring</span>
+          </div>
+        </div>
+      </div>
+      <div class="sport-card" style="grid-column: 1 / -1">
+        <div style="display:grid; grid-template-columns:auto 1fr; overflow:hidden; border-radius:16px;">
+          <div class="sport-banner" style="background:var(--blue); width:200px; min-height:100%; border-radius:0;">
+            <div class="sport-banner-pattern"></div>
+            <div style="text-align:center; position:relative; z-index:2;">
+              <div style="font-size:36px; margin-bottom:4px;">⭐</div>
+              <div style="font-family:var(--font-display); font-size:13px; font-weight:800; color:rgba(255,255,255,0.8); letter-spacing:1px; text-transform:uppercase;">New</div>
+            </div>
+          </div>
+          <div class="sport-body" style="display:grid; grid-template-columns:1fr auto; gap:20px; align-items:center;">
+            <div>
+              <div style="font-family:var(--font-display); font-size:11px; font-weight:700; letter-spacing:2px; color:var(--blue); text-transform:uppercase; margin-bottom:4px;">Premium Add-On · $50</div>
+              <div class="sport-name" style="color:var(--blue);">F.O.F. COMBINE</div>
+              <p class="sport-desc mb-0">Athletic development training — Speed, Agility, Strength, Coordination, and Sport Transfer. Runs alongside Winter sessions. Premium track athletes receive individual progress notes and a Championship Day showcase performance.</p>
+            </div>
+            <div style="flex-shrink:0;">
+              <div class="sport-sessions">
+                <span class="sport-tag" style="background:var(--teal)">Winter A</span>
+                <span class="sport-tag" style="background:var(--blue)">Winter B</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ REGISTER PAGE ════════════════ -->
+<div class="page" id="page-register">
+  <div class="reg-hero">
+    <div class="reg-hero-bg"></div>
+    <div style="font-family:var(--font-display); font-size:12px; font-weight:700; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:10px; position:relative;">Brantley Sports Group LLC</div>
+    <h1 class="reg-hero">F.O.F. YOUTH SPORTS<br>REGISTRATION</h1>
+    <p>2026–2027 Season · Corvian Community School · Charlotte, NC</p>
+    <div class="price-pill">$150 per session</div>
+    <p style="color:rgba(255,255,255,0.6); font-size:14px; position:relative;">Register by session. All skill levels. Grades K–8.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">Choose Your Session</div>
+      <h2 class="section-title">SELECT & REGISTER</h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub">Click any session below to open the registration form. Payment of $150 is collected at checkout.</p>
+    </div>
+
+    <div class="session-reg-grid">
+      <div class="reg-session-card">
+        <div class="reg-session-top" style="background:var(--orange)">
+          <div class="reg-session-name">FALL SESSION A</div>
+          <div class="reg-session-dates">Sep 19 – Oct 17, 2026 · 5 Saturdays</div>
+        </div>
+        <div class="reg-session-body">
+          <p class="reg-session-sports">Basketball · Soccer · Flag Football · Cheer · Tee Ball</p>
+          <a href="#" class="reg-btn" style="background:var(--orange)" onclick="alert('Connect your registration form URL here — paste your Netlify form link or registration tool link.')">Register for Fall A — $150 →</a>
+        </div>
+      </div>
+      <div class="reg-session-card">
+        <div class="reg-session-top" style="background:var(--red)">
+          <div class="reg-session-name">FALL SESSION B</div>
+          <div class="reg-session-dates">Nov 7 – Dec 12, 2026 · 5 Saturdays</div>
+        </div>
+        <div class="reg-session-body">
+          <p class="reg-session-sports">Basketball · Volleyball · Cheer</p>
+          <a href="#" class="reg-btn" style="background:var(--red)" onclick="alert('Connect your registration form URL here.')">Register for Fall B — $150 →</a>
+        </div>
+      </div>
+      <div class="reg-session-card">
+        <div class="reg-session-top" style="background:var(--teal)">
+          <div class="reg-session-name">WINTER SESSION A</div>
+          <div class="reg-session-dates">Jan 9 – Feb 6, 2027 · 5 Saturdays</div>
+        </div>
+        <div class="reg-session-body">
+          <p class="reg-session-sports">Basketball · Volleyball · F.O.F. Combine ★</p>
+          <a href="#" class="reg-btn" style="background:var(--teal)" onclick="alert('Connect your registration form URL here.')">Register for Winter A — $150 →</a>
+        </div>
+      </div>
+      <div class="reg-session-card">
+        <div class="reg-session-top" style="background:var(--blue)">
+          <div class="reg-session-name">WINTER SESSION B</div>
+          <div class="reg-session-dates">Feb 20 – Mar 20, 2027 · 5 Saturdays</div>
+        </div>
+        <div class="reg-session-body">
+          <p class="reg-session-sports">Basketball · Volleyball · F.O.F. Combine ★</p>
+          <a href="#" class="reg-btn" style="background:var(--blue)" onclick="alert('Connect your registration form URL here.')">Register for Winter B — $150 →</a>
+        </div>
+      </div>
+      <div class="reg-session-card">
+        <div class="reg-session-top" style="background:var(--green)">
+          <div class="reg-session-name">SPRING SESSION</div>
+          <div class="reg-session-dates">Apr 17 – May 22, 2027 · 5 Saturdays</div>
+        </div>
+        <div class="reg-session-body">
+          <p class="reg-session-sports">Basketball · Soccer · Flag Football · Cheer · Tee Ball</p>
+          <a href="#" class="reg-btn" style="background:var(--green)" onclick="alert('Connect your registration form URL here.')">Register for Spring — $150 →</a>
+        </div>
+      </div>
+      <div class="reg-session-card" style="border:2px solid var(--blue)">
+        <div class="reg-session-top" style="background:var(--blue)">
+          <div class="reg-session-name">F.O.F. COMBINE ★</div>
+          <div class="reg-session-dates">Winter Sessions Only · Add-On</div>
+        </div>
+        <div class="reg-session-body">
+          <p class="reg-session-sports">Athletic Development — Speed · Agility · Strength · Coordination. Added to Winter A or B registration.</p>
+          <a href="#" class="reg-btn" style="background:var(--blue)" onclick="alert('Select F.O.F. Combine as an add-on when registering for Winter A or B.')">Add Combine to Winter Reg → +$50</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div style="background:var(--navy); border-radius:20px; padding:40px; margin-top:48px;">
+      <div style="text-align:center; margin-bottom:36px;">
+        <div style="font-family:var(--font-display); font-size:12px; font-weight:700; letter-spacing:3px; color:var(--gold); text-transform:uppercase; margin-bottom:8px;">Simple Process</div>
+        <h3 style="font-family:var(--font-display); font-size:32px; font-weight:900; color:var(--white);">HOW REGISTRATION WORKS</h3>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-title" style="color:var(--white)">Choose Session</div>
+          <div class="step-desc" style="color:rgba(255,255,255,0.6)">Pick the season and sports that work best for your athlete's schedule.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-title" style="color:var(--white)">Fill Out Form</div>
+          <div class="step-desc" style="color:rgba(255,255,255,0.6)">Athlete info, parent contact, emergency contacts, and waiver — all in one place.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-title" style="color:var(--white)">Pay $150</div>
+          <div class="step-desc" style="color:rgba(255,255,255,0.6)">Secure payment collected at checkout. Visa, Mastercard, Apple Pay & Google Pay accepted.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-title" style="color:var(--white)">Show Up Saturday</div>
+          <div class="step-desc" style="color:rgba(255,255,255,0.6)">Check in at 7:30 AM. Games begin at 8:00 AM. Bring water and energy.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ CONTACT PAGE ════════════════ -->
+<div class="page" id="page-contact">
+  <div style="background:var(--navy); padding:60px 5%; text-align:center; position:relative; overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%, rgba(212,160,23,0.2) 0%, transparent 70%);"></div>
+    <div style="position:relative;">
+      <div style="font-family:var(--font-display); font-size:12px; font-weight:700; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:10px;">We'd love to hear from you</div>
+      <h1 style="font-family:var(--font-display); font-size:clamp(40px,7vw,72px); font-weight:900; color:var(--white); line-height:1; margin-bottom:12px;">GET IN TOUCH</h1>
+      <p style="color:rgba(255,255,255,0.7); font-size:16px;">Questions about registration, sessions, or the program? Reach out.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Corvian Community School</div>
+            <div class="contact-sub">Charlotte, North Carolina</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📅</div>
+          <div>
+            <div class="contact-label">Game Days</div>
+            <div class="contact-value">Every Saturday</div>
+            <div class="contact-sub">Check-in 7:30 AM · Games 8:00 AM – 12:00 PM</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-label">Follow Us</div>
+            <div class="contact-value">@fofyouthsports</div>
+            <div class="contact-sub">Instagram — updates, highlights, announcements</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🏀</div>
+          <div>
+            <div class="contact-label">Program Director</div>
+            <div class="contact-value">Coach Jeffery Brantley</div>
+            <div class="contact-sub">Brantley Sports Group LLC · F.O.F. Youth Sports</div>
+          </div>
+        </div>
+        <div style="background:var(--navy); border-radius:16px; padding:24px; text-align:center;">
+          <div style="font-family:var(--font-display); font-size:20px; font-weight:800; color:var(--white); margin-bottom:6px;">Ready to Register?</div>
+          <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">Registration is open for all 2026–2027 sessions.</p>
+          <a href="#" onclick="showPage('register')" class="btn-primary" style="display:inline-block;">Register Now — $150 →</a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-title">SEND A MESSAGE</div>
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input class="form-input" type="text" placeholder="First and Last Name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input class="form-input" type="email" placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <select class="form-select">
+            <option value="">Select a topic...</option>
+            <option>Registration Question</option>
+            <option>Session / Schedule Info</option>
+            <option>F.O.F. Combine Program</option>
+            <option>Sports Offered</option>
+            <option>Volunteer Coaching</option>
+            <option>Partnership / Sponsorship</option>
+            <option>General Question</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Tell us what's on your mind..."></textarea>
+        </div>
+        <button class="form-submit" onclick="handleContact(this)">SEND MESSAGE →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">F.O.F. YOUTH SPORTS</div>
+      <div class="footer-brand-sub">Focus On Fundamentals</div>
+      <p class="footer-brand-desc">Charlotte's premier Saturday youth sports league for grades K–8. Five sessions, seven sports, one community. Hosted at Corvian Community School. Founded by Coach Jeffery Brantley and Brantley Sports Group LLC.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Program</div>
+      <a class="footer-link" href="#" onclick="showPage('home')">Home</a>
+      <a class="footer-link" href="#" onclick="showPage('schedule')">Season Schedule</a>
+      <a class="footer-link" href="#" onclick="showPage('sports')">Sports Offered</a>
+      <a class="footer-link" href="#" onclick="showPage('register')">Registration</a>
+      <a class="footer-link" href="#" onclick="showPage('contact')">Contact</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Sessions</div>
+      <a class="footer-link" href="#" onclick="showPage('register')">Fall Session A</a>
+      <a class="footer-link" href="#" onclick="showPage('register')">Fall Session B</a>
+      <a class="footer-link" href="#" onclick="showPage('register')">Winter Session A</a>
+      <a class="footer-link" href="#" onclick="showPage('register')">Winter Session B</a>
+      <a class="footer-link" href="#" onclick="showPage('register')">Spring Session</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Brantley Sports Group LLC · F.O.F. Youth Sports · Charlotte, NC</span>
+    <div class="footer-social">
+      <a class="social-chip" href="https://instagram.com/fofyouthsports" target="_blank">@fofyouthsports</a>
+      <a class="social-chip" href="https://instagram.com/fofyouthfoundation" target="_blank">@fofyouthfoundation</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  const navEl = document.getElementById('nav-' + id);
+  if (navEl) navEl.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // close mobile menu
+  document.getElementById('navLinks').classList.remove('open');
+  return false;
+}
+
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+function handleContact(btn) {
+  btn.textContent = '✓ MESSAGE SENT — We\'ll be in touch soon!';
+  btn.style.background = 'var(--green)';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
