@@ -347,6 +347,11 @@ nav {
   transition: all 0.2s; box-shadow: 0 4px 16px rgba(10,31,68,0.3);
 }
 .form-submit:hover { background: var(--navy-mid); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(10,31,68,0.4); }
+.form-submit:disabled { cursor: wait; opacity: 0.75; transform: none; }
+.form-status { min-height: 20px; margin-top: 12px; font-size: 13px; font-weight: 600; line-height: 1.5; }
+.form-status.success { color: var(--green); }
+.form-status.error { color: var(--red); }
+.form-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* ── FOOTER ── */
 footer {
@@ -426,10 +431,10 @@ footer {
     <a href="#" onclick="showPage('home')"     class="active" id="nav-home">Home</a>
     <a href="#" onclick="showPage('schedule')" id="nav-schedule">Schedule</a>
     <a href="#" onclick="showPage('sports')"   id="nav-sports">Sports</a>
-    <a href="#" onclick="showPage('register')" id="nav-register">Register</a>
+    <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer" id="nav-register">Register</a>
     <a href="#" onclick="showPage('contact')"  id="nav-contact">Contact</a>
   </div>
-  <a class="nav-cta" href="#" onclick="showPage('register')">Register Now →</a>
+  <a class="nav-cta" href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer">Register Now →</a>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
@@ -450,7 +455,7 @@ footer {
         <div class="hero-subtitle">F.O.F. Youth Sports · Grades K–6</div>
         <p class="hero-desc">Charlotte's premier Saturday youth sports league. Five sessions, seven sports, one community. Building athletes and champions from Kindergarten through 6th grade — every Saturday, all year long.</p>
         <div class="hero-btns">
-          <a href="#" class="btn-primary" onclick="showPage('register')">Register for 2026–2027 →</a>
+          <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" class="btn-primary" target="_blank" rel="noopener noreferrer">Register for 2026–2027 →</a>
           <a href="#" class="btn-outline" onclick="showPage('schedule')">View Schedule</a>
         </div>
       </div>
@@ -569,7 +574,7 @@ footer {
         <div style="text-align:center; flex-shrink:0;">
           <div style="font-family:var(--font-display); font-size:56px; font-weight:900; color:var(--white); line-height:1;">$50</div>
           <div style="font-size:12px; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">Add-On / Session</div>
-          <a href="#" onclick="showPage('register')" style="background:var(--white); color:var(--blue); font-weight:800; font-size:13px; padding:10px 24px; border-radius:8px; text-decoration:none; display:block; text-transform:uppercase; letter-spacing:0.5px;">Add to Registration →</a>
+          <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer" style="background:var(--white); color:var(--blue); font-weight:800; font-size:13px; padding:10px 24px; border-radius:8px; text-decoration:none; display:block; text-transform:uppercase; letter-spacing:0.5px;">Add to Registration →</a>
         </div>
       </div>
 
@@ -752,7 +757,7 @@ footer {
           </div>
         </div>
         <div style="text-align:center; margin-top:20px;">
-          <a href="#" onclick="showPage('register')" class="btn-primary" style="display:inline-block;">Register for the Next Session →</a>
+          <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block;">Register for the Next Session →</a>
         </div>
       </div>
     </div>
@@ -916,7 +921,7 @@ footer {
         </div>
         <div class="reg-session-body">
           <p class="reg-session-sports">Basketball · Soccer · Flag Football · Cheer · Tee Ball</p>
-          <a href="#" class="reg-btn" style="background:var(--orange)" onclick="alert('Connect your registration form URL here — paste your Netlify form link or registration tool link.')">Register for Fall A — $150 →</a>
+          <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" class="reg-btn" style="background:var(--orange)" target="_blank" rel="noopener noreferrer">Register for Fall A — $150 →</a>
         </div>
       </div>
       <div class="reg-session-card">
@@ -926,7 +931,7 @@ footer {
         </div>
         <div class="reg-session-body">
           <p class="reg-session-sports">Basketball · Volleyball · Cheer</p>
-          <a href="#" class="reg-btn" style="background:var(--red)" onclick="alert('Connect your registration form URL here.')">Register for Fall B — $150 →</a>
+          <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" class="reg-btn" style="background:var(--red)" target="_blank" rel="noopener noreferrer">Register for Fall B — $150 →</a>
         </div>
       </div>
       <div class="reg-session-card">
@@ -936,7 +941,7 @@ footer {
         </div>
         <div class="reg-session-body">
           <p class="reg-session-sports">Basketball · Volleyball · F.O.F. Combine ★</p>
-          <a href="#" class="reg-btn" style="background:var(--teal)" onclick="alert('Connect your registration form URL here.')">Register for Winter A — $150 →</a>
+          <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" class="reg-btn" style="background:var(--teal)" target="_blank" rel="noopener noreferrer">Register for Winter A — $150 →</a>
         </div>
       </div>
       <div class="reg-session-card">
@@ -946,7 +951,7 @@ footer {
         </div>
         <div class="reg-session-body">
           <p class="reg-session-sports">Basketball · Volleyball · F.O.F. Combine ★</p>
-          <a href="#" class="reg-btn" style="background:var(--blue)" onclick="alert('Connect your registration form URL here.')">Register for Winter B — $150 →</a>
+          <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" class="reg-btn" style="background:var(--blue)" target="_blank" rel="noopener noreferrer">Register for Winter B — $150 →</a>
         </div>
       </div>
       <div class="reg-session-card">
@@ -956,7 +961,7 @@ footer {
         </div>
         <div class="reg-session-body">
           <p class="reg-session-sports">Basketball · Soccer · Flag Football · Cheer · Tee Ball</p>
-          <a href="#" class="reg-btn" style="background:var(--green)" onclick="alert('Connect your registration form URL here.')">Register for Spring — $150 →</a>
+          <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" class="reg-btn" style="background:var(--green)" target="_blank" rel="noopener noreferrer">Register for Spring — $150 →</a>
         </div>
       </div>
       <div class="reg-session-card" style="border:2px solid var(--blue)">
@@ -1052,23 +1057,31 @@ footer {
         <div style="background:var(--navy); border-radius:16px; padding:24px; text-align:center;">
           <div style="font-family:var(--font-display); font-size:20px; font-weight:800; color:var(--white); margin-bottom:6px;">Ready to Register?</div>
           <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">Registration is open for all 2026–2027 sessions.</p>
-          <a href="#" onclick="showPage('register')" class="btn-primary" style="display:inline-block;">Register Now — $150 →</a>
+          <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block; margin-bottom:10px;">Register Now — $150 →</a>
+          <div>
+            <a href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.7); font-size:13px; font-weight:700; text-decoration:underline;">Volunteer & Coach Sign-Up →</a>
+          </div>
         </div>
       </div>
 
-      <div class="contact-form">
+      <form class="contact-form" id="contactForm" method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleContact(event)">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="subject" value="New F.O.F. Youth Sports contact form submission">
+        <p class="form-honeypot" aria-hidden="true">
+          <label>Do not fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
         <div class="form-title">SEND A MESSAGE</div>
         <div class="form-group">
-          <label class="form-label">Your Name</label>
-          <input class="form-input" type="text" placeholder="First and Last Name">
+          <label class="form-label" for="contact-name">Your Name</label>
+          <input class="form-input" id="contact-name" name="name" type="text" placeholder="First and Last Name" autocomplete="name" required>
         </div>
         <div class="form-group">
-          <label class="form-label">Email Address</label>
-          <input class="form-input" type="email" placeholder="you@email.com">
+          <label class="form-label" for="contact-email">Email Address</label>
+          <input class="form-input" id="contact-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
         </div>
         <div class="form-group">
-          <label class="form-label">Subject</label>
-          <select class="form-select">
+          <label class="form-label" for="contact-topic">Subject</label>
+          <select class="form-select" id="contact-topic" name="topic" required>
             <option value="">Select a topic...</option>
             <option>Registration Question</option>
             <option>Session / Schedule Info</option>
@@ -1080,11 +1093,12 @@ footer {
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label">Message</label>
-          <textarea class="form-textarea" placeholder="Tell us what's on your mind..."></textarea>
+          <label class="form-label" for="contact-message">Message</label>
+          <textarea class="form-textarea" id="contact-message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
         </div>
-        <button class="form-submit" onclick="handleContact(this)">SEND MESSAGE →</button>
-      </div>
+        <button class="form-submit" type="submit">SEND MESSAGE →</button>
+        <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </div>
 </div>
@@ -1102,16 +1116,16 @@ footer {
       <a class="footer-link" href="#" onclick="showPage('home')">Home</a>
       <a class="footer-link" href="#" onclick="showPage('schedule')">Season Schedule</a>
       <a class="footer-link" href="#" onclick="showPage('sports')">Sports Offered</a>
-      <a class="footer-link" href="#" onclick="showPage('register')">Registration</a>
+      <a class="footer-link" href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer">Registration</a>
       <a class="footer-link" href="#" onclick="showPage('contact')">Contact</a>
     </div>
     <div>
       <div class="footer-col-title">Sessions</div>
-      <a class="footer-link" href="#" onclick="showPage('register')">Fall Session A</a>
-      <a class="footer-link" href="#" onclick="showPage('register')">Fall Session B</a>
-      <a class="footer-link" href="#" onclick="showPage('register')">Winter Session A</a>
-      <a class="footer-link" href="#" onclick="showPage('register')">Winter Session B</a>
-      <a class="footer-link" href="#" onclick="showPage('register')">Spring Session</a>
+      <a class="footer-link" href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer">Fall Session A</a>
+      <a class="footer-link" href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer">Fall Session B</a>
+      <a class="footer-link" href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer">Winter Session A</a>
+      <a class="footer-link" href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer">Winter Session B</a>
+      <a class="footer-link" href="https://app.teamlinkt.com/register/find/fofyouthsports1" target="_blank" rel="noopener noreferrer">Spring Session</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1140,11 +1154,40 @@ function toggleMenu() {
   document.getElementById('navLinks').classList.toggle('open');
 }
 
-function handleContact(btn) {
-  btn.textContent = '✓ MESSAGE SENT — We\'ll be in touch soon!';
-  btn.style.background = 'var(--green)';
-  btn.disabled = true;
+async function handleContact(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const button = form.querySelector('.form-submit');
+  const status = document.getElementById('contactStatus');
+  const formData = new FormData(form);
+
+  button.disabled = true;
+  button.textContent = 'SENDING...';
+  status.textContent = '';
+  status.className = 'form-status';
+
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    });
+    if (response.ok) {
+      form.reset();
+      button.textContent = '✓ MESSAGE SENT →';
+      status.textContent = "Thanks — we'll be in touch soon!";
+      status.className = 'form-status success';
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch (err) {
+    button.disabled = false;
+    button.textContent = 'SEND MESSAGE →';
+    status.textContent = 'Something went wrong — please try again or email us directly.';
+    status.className = 'form-status error';
+  }
 }
+
 </script>
 </body>
 </html>
